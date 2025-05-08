@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Photo & Videography</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <button class="dropdown-toggle">Blog ▾</button>
+                <div class="dropdown-content">
+                    <a href="blog.html">General Blog</a>
+                    <a href="CyberSec.html">Cyber Security</a>
+                    <a href="GameDev.html">Game Development</a>
+                    <a href="MusicP.html">Music Production</a>
+                    <a href="VideoEditing.html">Video Editing</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+            <button id="darkModeToggle">🌓</button>
+        </nav>
+    </header>
+    <div class="page-content transition">
+        <main class="about-wrapper">
+            <video autoplay muted loop playsinline class="background-video">
+                <source src="videos/about-bg.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <section class="topic-header">
+                <h1>My Media skills</h1>
+                <p>
+                    Underconstruction
+                </p>
+            </section>
+        </main>
+        <div id="construction-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h2>⚠️ Page Under Construction ⚠️</h2>
+                <p>
+                    This page is still being built. Some functions may not work yet. Thanks for your patience!
+                    You can use the social buttons on the footer of the page to reach out to me.
+                </p>
+                <button id="close-modal">OK</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
+                <img src="icons/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
+                <img src="icons/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
+                <img src="icons/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
+                <img src="icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
+                <img src="icons/whatsapp.svg" alt="WhatsApp" />
+            </a>
+        </div>
+        <p>© 2025 ZhiQi</p>
+    </footer>
+    <script>
+        window.addEventListener("load", () => {
+            const modal = document.getElementById("construction-modal");
+            const closeBtn = document.getElementById("close-modal");
+
+            modal.style.display = "flex";
+
+            closeBtn.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>

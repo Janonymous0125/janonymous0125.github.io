@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>About me</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <button class="dropdown-toggle">Blog ▾</button>
+                <div class="dropdown-content">
+                    <a href="blog.html">General Blog</a>
+                    <a href="CyberSec.html">Cyber Security</a>
+                    <a href="GameDev.html">Game Development</a>
+                    <a href="MusicP.html">Music Production</a>
+                    <a href="VideoEditing.html">Video Editing</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+            <button id="darkModeToggle">🌓</button>
+        </nav>
+    </header>
+    <div class="page-content transition">
+        <main class="about-wrapper">
+            <video autoplay muted loop playsinline class="background-video">
+                <source src="videos/about-bg.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <section class="about-section">
+                <div class="about-text">
+                    <div class="intro-with-image">
+                        <img src="images/profile.jpg" alt="Jeremiah Wong Zhi Qi" class="inline-profile" />
+                        <h1>Hi, I'm Jeremiah Wong Zhi Qi</h1>
+                    </div>
+                    <div class="about-paragraphs">
+                        <p>
+                            I'm just a curious boy who likes to learn anything that involves computer, science and creativity. I've been finding my way across the field of
+                            Game developing (including 3D Designing, Unreal Engine, Blender), Graphic Designing (including Interior Designing, Canva, Adobe Illustrator), Music production (including FL Studio and Dee Jay Jamming),
+                            Video Editing (like CapCut, Adobe Premium Pro, Blackmagic Davinci Resolve), and also took some Cybersecurity courses on <a href='https://www.eccouncil.org/'>EC-Council</a>.
+                        </p>
+                        <p>
+                            Over the years, I’ve worked on a variety of creative projects - web designing, game designing, music production, etc. When I'm not working, I enjoy starting a new research on new projects learning new things eveyday.
+                        </p>
+                        <p>
+                            This site showcases my portfolio, blogs, resume and some of my projects that i started.
+                        </p>
+                        <p>
+                            Thanks for stopping by! Feel free to reach out to me through the <a href="contact.html">Contact</a> page.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
+                    <img src="icons/youtube.svg" alt="YouTube" />
+                </a>
+                <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
+                    <img src="icons/facebook.svg" alt="Facebook" />
+                </a>
+                <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
+                    <img src="icons/instagram.svg" alt="Instagram" />
+                </a>
+                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
+                    <img src="icons/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
+                    <img src="icons/whatsapp.svg" alt="WhatsApp" />
+                </a>
+            </div>
+            <p>© 2025 ZhiQi</p>
+        </footer>
+</body>
+</html>

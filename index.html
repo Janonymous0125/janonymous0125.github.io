@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Webpage</title>
+    <link rel="icon" href="icons/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <button class="dropdown-toggle">Blog ▾</button>
+                <div class="dropdown-content">
+                    <a href="blog.html">General Blog</a>
+                    <a href="CyberSec.html">Cyber Security</a>
+                    <a href="GameDev.html">Game Development</a>
+                    <a href="MusicP.html">Music Production</a>
+                    <a href="VideoEditing.html">Video Editing</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+            <button id="darkModeToggle">🌓</button>
+        </nav>
+    </header>
+    <div class="page-content transition">
+        <main>
+            <section class="creative-work">
+                <h2>Categories of my work</h2>
+                <div class="category-grid">
+                    <a href="GameDev.html" class="category-card">
+                        <img src="images/unreal_logo.png" alt="Games" />
+                        <span>Game Developing</span>
+                    </a>
+                    <a href="MusicP.html" class="category-card">
+                        <img src="images/MusicP.jpg" alt="Music" />
+                        <span>Music Production</span>
+                    </a>
+                    <a href="CyberSec.html" class="category-card">
+                        <img src="images/hacks.png" alt="Hacks" />
+                        <span>Cybersecurity</span>
+                    </a>
+                    <a href="VideoEditing.html" class="category-card">
+                        <img src="images/photo-icon.jpg" alt="Photo & Video" />
+                        <span>Photography & Videography</span>
+                    </a>
+                </div>
+            </section>
+            <section>
+                <h2>Resume</h2>
+                <p>You can link a PDF or describe your experience here.</p>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
+                <img src="icons/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
+                <img src="icons/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
+                <img src="icons/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
+                <img src="icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
+                <img src="icons/whatsapp.svg" alt="WhatsApp" />
+            </a>
+        </div>
+        <p>© 2025 ZhiQi</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Tutorial",
+    "date": "06 May 2025",
+    "image": "images/post1.jpg",
+    "content": "This is the content of my first post. You can write **bold**, _italic_, or even <a href='https://www.facebook.com/profile.php?id=61562756152933'>links</a>!"
+  },
+  {
+    "title": "Testings Post",
+    "date": "07 May 2025",
+    "content": "This is a post for testing. Please Subscribe to my <a href='https://youtube.com/@zhiqi0125?sub_confirmation=1'>YouTube Channel</a>"
+  }
+]
