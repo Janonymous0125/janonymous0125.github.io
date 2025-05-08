@@ -1,104 +1,62 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>404 - Page Not Found</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
     <style>
         body {
+            font-family: sans-serif;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(135deg, #0f0f0f, #000000);
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
             margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
             text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .error-container {
-            max-width: 800px;
-            padding: 2rem;
-            border-radius: 1.25rem;
-            background-color: rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        h1 {
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 10px;
         }
-
-            .error-container h1 {
-                font-size: 4.5rem;
-                color: #6ee7b7;
-                margin-bottom: 1rem;
-                text-shadow: 0 0 12px rgba(102, 231, 183, 0.8);
-                letter-spacing: -0.05em;
-            }
-
-            .error-container p {
-                font-size: 1.25rem;
-                margin-bottom: 2.5rem;
-                line-height: 1.7;
-                color: #d4d4d8;
-                font-weight: 400;
-            }
-
-            .error-container a {
-                text-decoration: none;
-                color: #fff;
-                background: linear-gradient(90deg, #6ee7b7, #14b8a6);
-                padding: 0.8rem 2.2rem;
-                border-radius: 0.75rem;
-                font-weight: 600;
-                transition: all 0.3s ease;
-                box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-                display: inline-flex;
-                align-items: center;
-                gap: 0.75rem;
-                font-size: 1.1rem;
-            }
-
-                .error-container a:hover {
-                    background: linear-gradient(90deg, #10b981, #0e7490);
-                    transform: translateY(-3px);
-                    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.4);
-                }
-
-        .back-icon {
-            width: 1.2em;
-            height: 1.2em;
-            stroke-width: 2.5;
-            stroke: currentColor;
-            fill: none;
-            display: inline-block;
-            vertical-align: middle;
+        p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="error-container">
-        <h1>404 - Page Error</h1>
-        <p>
-            <span style="color: #a7f3d0;">Page under construction</span>
-        </p>
-        <p>
-            Don't worry, we'll get you back on track.
-        </p>
-        <a href="#" onclick="goBack()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="back-icon" viewBox="0 0 24 24">
-                <path d="M11.71 15.88l-4.29-4.29a1 1 0 0 1 0-1.41l4.29-4.29a1 1 0 0 1 1.41 1.41L10.83 10h8.17a1 1 0 0 1 0 2H10.83l2.29 2.29a1 1 0 0 1-1.41 1.41z" />
-            </svg>
-            Back
-        </a>
-    </div>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+    <div class="container">
+        <div class="image-container">
+            <img src="images/constructionerror.png" alt="404 Error Illustration">
+        </div>
+        <h1>Oops! Page Not Found</h1>
+        <p>We're sorry, but the page you requested could not be found.</p>
+        <p>You can <a href="/">go back to the homepage</a> or try searching again.</p>
+        </div>
 </body>
 </html>
