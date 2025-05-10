@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/Aquire.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/AquireBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/AquireLight.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
 :root {
     --bg: #f4f4f4;
     --text: #222;
@@ -516,4 +537,14 @@ form {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+
+h1 {
+    font-family: 'CustomFont', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'CustomFont', sans-serif;
+    font-weight: 300;
 }
