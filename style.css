@@ -1,127 +1,172 @@
 :root {
-  --bg: #f4f4f4;
-  --text: #222;
-  --accent: #00e0ff;
-  --card: #ffffff;
+    --bg: #f4f4f4;
+    --text: #222;
+    --accent: #00e0ff;
+    --card: #ffffff;
+    /* Sci-fi color palette additions */
+    --sci-fi-border: #00ffff; /* Cyan */
+    --sci-fi-glow: rgba(0, 255, 255, 0.3);
 }
 
 body.dark {
-  --bg: #121212;
-  --text: #f5f5f5;
-  --card: #1f1f1f;
+    --bg: #121212;
+    --text: #f5f5f5;
+    --card: #1f1f1f;
+    /* Dark mode sci-fi colors */
+    --sci-fi-border: #4682B4; /* Steel Blue */
+    --sci-fi-glow: rgba(70, 130, 180, 0.2);
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-  background: var(--card);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: var(--card);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
-  margin: 0 10px;
-  color: var(--accent);
-  text-decoration: none;
+    margin: 0 10px;
+    color: var(--accent);
+    text-decoration: none;
 }
 
 nav button {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 main {
-  padding: 2rem;
+    padding: 2rem;
 }
 
-section, article {
-  margin-bottom: 2rem;
-  background: var(--card);
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 224, 255, 0.2);
+section,
+article,
+.about-section,
+form,
+.modal-content,
+.project-card,
+.topic-header {
+    /* Applying to multiple elements */
+    margin-bottom: 2rem;
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--sci-fi-glow);
+    /* Subtle glow */
+    transition: all 0.3s ease;
+    /* Smooth transitions */
+    /* Sci-fi border accent */
+    border: 1px solid var(--sci-fi-border);
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--card);
-  color: var(--accent);
+    section:hover,
+    article:hover,
+    .about-section:hover,
+    form:hover,
+    .modal-content:hover,
+    .project-card:hover,
+    .topic-header:hover {
+        box-shadow: 0 0 15px var(--sci-fi-glow);
+        /* Stronger glow on hover */
+        transform: translateY(-3px);
+        /* Slight lift on hover */
+        border-color: var(--accent);
+    }
+
+/* Glassmorphism (Optional, use sparingly) */
+.glassy {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Neumorphism (Subtle) */
+.neo {
+    border-radius: 10px;
+    background: var(--card);
+    box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+}
+
+body.dark .neo {
+    box-shadow: 5px 5px 10px #191919, -5px -5px 10px #191919;
 }
 
 .about-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  background: var(--background-secondary);
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 224, 255, 0.15);
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: var(--card);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--sci-fi-glow);
 }
 
-.about-section h1 {
-  font-size: 2.5rem;
-  color: var(--accent-color, #00e0ff);
-  margin-bottom: 1rem;
-}
+    .about-section h1 {
+        font-size: 2.5rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+    }
 
-.about-section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  color: var(--text-color, #ccc);
-}
+    .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        color: var(--text);
+    }
 
 .post-image {
-  display: block;
-  margin: 1rem auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 224, 255, 0.2);
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--sci-fi-glow);
 }
 
 .page-content {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 1s ease, transform 1s ease;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .page-exit {
-  opacity: 0;
-  transform: translateX(-100px); /* Leftward swipe */
+    opacity: 0;
+    transform: translateX(-100px);
+    /* Leftward swipe */
 }
 
 .intro-with-image {
-  display: block;
-  margin: 1rem auto;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+    display: block;
+    margin: 1rem auto;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .inline-profile {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  object-fit: cover;
-  box-shadow: 0 0 8px rgba(0, 224, 255, 0.3);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 8px var(--sci-fi-glow);
 }
 
 .about-paragraphs p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  color: var(--text-color, #ccc);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: var(--text);
 }
 
 .creative-work {
@@ -144,7 +189,7 @@ footer {
     position: relative;
     overflow: hidden;
     background-color: var(--card);
-    box-shadow: 0 0 12px rgba(0, 224, 255, 0.1);
+    box-shadow: 0 0 12px var(--sci-fi-glow);
     text-align: center;
     text-decoration: none;
     color: var(--text);
@@ -152,6 +197,7 @@ footer {
     align-items: flex-end;
     justify-content: center;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--sci-fi-border);
 }
 
     .category-card img {
@@ -179,7 +225,8 @@ footer {
 
     .category-card:hover {
         transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
+        box-shadow: 0 0 20px var(--sci-fi-glow);
+        border-color: var(--accent);
     }
 
 .topic-header {
@@ -187,7 +234,7 @@ footer {
     padding: 2rem 1rem;
     background-color: var(--card);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 224, 255, 0.1);
+    box-shadow: 0 0 10px var(--sci-fi-glow);
     margin-bottom: 2rem;
 }
 
@@ -203,22 +250,23 @@ footer {
     gap: 1.5rem;
 }
 
-    .topic-body#post-list { 
+    .topic-body#post-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
 
 @media (max-width: 768px) {
-    .topic-body#post-list { 
+    .topic-body#post-list {
         grid-template-columns: 1fr;
     }
 }
+
 .project-card {
     background-color: var(--card);
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 224, 255, 0.1);
+    box-shadow: 0 0 8px var(--sci-fi-glow);
 }
 
     .project-card h2 {
@@ -255,7 +303,7 @@ footer {
     left: 0;
     background-color: var(--card);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 224, 255, 0.1);
+    box-shadow: 0 0 10px var(--sci-fi-glow);
     min-width: 180px;
     overflow: hidden;
     max-height: 0;
@@ -267,7 +315,8 @@ footer {
 
 /* Active state (shown via JS) */
 .dropdown.open .dropdown-content {
-    max-height: 500px; /* Enough to show all links */
+    max-height: 500px;
+    /* Enough to show all links */
     opacity: 1;
     pointer-events: auto;
 }
@@ -296,7 +345,7 @@ footer {
     max-width: 100%;
     margin: 1rem 0;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 224, 255, 0.2);
+    box-shadow: 0 0 10px var(--sci-fi-glow);
 }
 
 .footer {
@@ -339,14 +388,16 @@ footer {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.15; /* Adjust for visibility */
+    opacity: 0.15;
+    /* Adjust for visibility */
     pointer-events: none;
 }
 
 .about-section {
     position: relative;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.6); /* Optional glass effect */
+    background: rgba(0, 0, 0, 0.6);
+    /* Optional glass effect */
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 0 20px rgba(0, 224, 255, 0.1);
@@ -365,9 +416,10 @@ form {
     background: var(--card);
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 224, 255, 0.2);
+    box-shadow: 0 0 10px var(--sci-fi-glow);
     margin: 1rem auto;
     max-width: 500px;
+    border: 1px solid var(--sci-fi-border);
 }
 
     form label {
@@ -383,11 +435,12 @@ form {
         padding: 0.75rem;
         margin-top: 0.5rem;
         margin-bottom: 1rem;
-        border: 1px solid #ccc;
+        border: 1px solid var(--sci-fi-border);
+        /* Sci-fi border */
         border-radius: 5px;
-        background-color: var(--bg); /* Match body background */
+        background-color: var(--bg);
         color: var(--text);
-        transition: border-color 0.3s ease;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
         form input[type="text"]:focus,
@@ -395,11 +448,13 @@ form {
         form textarea:focus {
             border-color: var(--accent);
             outline: none;
-            box-shadow: 0 0 5px rgba(0, 224, 255, 0.5);
+            box-shadow: 0 0 5px var(--sci-fi-glow);
+            /* Subtle glow on focus */
         }
 
     form textarea {
-        resize: vertical; /* Allow vertical resizing */
+        resize: vertical;
+        /* Allow vertical resizing */
         min-height: 100px;
     }
 
@@ -411,12 +466,15 @@ form {
         border-radius: 5px;
         cursor: pointer;
         font-size: 1rem;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 2px 5px var(--sci-fi-glow);
     }
 
         form button[type="submit"]:hover {
-            background-color: #00b3cc; /* Slightly darker accent */
+            background-color: #00b3cc;
+            /* Slightly darker accent */
             color: var(--card);
+            box-shadow: 0 4px 8px var(--sci-fi-glow);
         }
 
 .modal-overlay {
@@ -440,7 +498,8 @@ form {
     border-radius: 12px;
     text-align: center;
     max-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
+    box-shadow: 0 0 20px var(--sci-fi-glow);
+    border: 1px solid var(--sci-fi-border);
 }
 
     .modal-content h2 {
