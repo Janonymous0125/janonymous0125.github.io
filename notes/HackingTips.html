@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking - Tips and Tricks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hacking Tips and Tricks</h1>
+        </header>
+
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <h2>Contents</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#web">Web Hacking</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <section id="web">
+                    <h2>Web Hacking</h2>
+                    <div class="note">
+                        <h3>Introduction to Web Hacking</h3>
+                        <p>
+                            <strong>Web hacking</strong> is the practice of discovering and exploiting vulnerabilities in websites and web applications to gain unauthorized access, manipulate data, or interfere with functionality.
+                            While the term often has a negative connotation, ethical hacking or penetration testing is used to <strong>identify and fix security flaws before malicious hackers can exploit them.</strong>
+                        </p>
+                        <p>
+                            Web applications are complex systems that rely on multiple layers—servers, databases, APIs, client-side code and each layer can be a potential target for attack. Web hacking focuses on exploiting
+                            weaknesses in how data is handled, validated, and transmitted across these layers. Here are some most common Web vulnerabilities I've learned during my research:
+                        </p>
+                        <ul>
+                            <li>Cross-Site Scripting (XSS)</li>
+                            <li>SQL Injection (SQLi)</li>
+                            <li>Cross-Site Request Forgery (CSRF)</li>
+                            <li>Broken Authentication</li>
+                            <li>Security Misconfiguration</li>
+                            <li>Sensitive Data Exposure</li>
+                            <li>Insecure Direct Object References (IDOR)</li>
+                            <li>File Upload Vulnerabilities</li>
+                            <li>Directory Traversal</li>
+                            <li>Remote Code Execution (RCE)</li>
+                            <li>XML External Entity (XXE) Attacks</li>
+                            <li>Server-Side Request Forgery (SSRF)</li>
+                            <li>Broken Access Control</li>
+                            <li>Clickjacking</li>
+                            <li>Unvalidated Redirects and Forwards</li>
+                        </ul>
+                        <p>
+                            Of course, there are more then 50+ vulnerabilities out there that can be found in the wild that's why web application security is so important especially for organizations and company that are running their own websites.
+                            It is crucial for organization and companies like this to do a security audit often to keep safe of both the web owner and their customers' data.
+                        </p>
+                    </div>
+                    <div class="note">
+                        <h3>What Makes Web Apps Vulnerable?</h3>
+                        <p>
+                            Many websites that are vulnerable because of its Improper handling of user input, Misconfigured servers or software, Insecure authentication and session management, Weak access controls, The use of outdated components
+                            or third-party libraries.
+                        </p>
+                    </div>
+                    <div class="note">
+                        <h3>What is in my notes?</h3>
+                        <p>
+                            In this note we will look into the vulnerabilities mentioned above, How it is done, How to prevent it.
+                        </p>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div id="construction-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h2>⚠️ Page Under Construction ⚠️</h2>
+                <p>
+                    The content of this note is not ready. I'm trying my best to update this daily, thank you for your time.
+                </p>
+                <button id="close-modal">OK</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
+                    <img src="../icons/youtube.svg" alt="YouTube" />
+                </a>
+                <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
+                    <img src="../icons/facebook.svg" alt="Facebook" />
+                </a>
+                <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
+                    <img src="../icons/instagram.svg" alt="Instagram" />
+                </a>
+                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
+                    <img src="../icons/linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
+                    <img src="../icons/whatsapp.svg" alt="WhatsApp" />
+                </a>
+            </div>
+            <p>© 2025 ZhiQi</p>
+        </footer>
+    </div>
+    <script>
+        window.addEventListener("load", () => {
+            const modal = document.getElementById("construction-modal");
+            const closeBtn = document.getElementById("close-modal");
+
+            modal.style.display = "flex";
+
+            closeBtn.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+        });
+    </script>
+    <script>
+        window.addEventListener("load", () => {
+            const modal = document.getElementById("construction-modal");
+            const closeBtn = document.getElementById("close-modal");
+
+            modal.style.display = "flex";
+
+            closeBtn.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
