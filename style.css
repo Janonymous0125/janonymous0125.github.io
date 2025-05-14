@@ -77,18 +77,15 @@ article,
 form,
 .modal-content,
 .topic-header {
-    /* Applying to multiple elements */
     margin-bottom: 2rem;
     background: var(--card);
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--sci-fi-glow);
-    /* Subtle glow */
     transition: all 0.3s ease;
-    /* Smooth transitions */
-    /* Sci-fi border accent */
     border: 1px solid var(--sci-fi-border);
-    position: relative; /* Ensure positioning context for pseudo-elements if needed */
+    position: relative; /* Needed for absolute positioning of borders */
+    overflow: hidden; /* To contain absolutely positioned elements */
 }
 
     section:hover,
@@ -98,10 +95,44 @@ form,
     .modal-content:hover,
     .topic-header:hover {
         box-shadow: 0 0 15px var(--sci-fi-glow);
-        /* Stronger glow on hover */
         transform: translateY(-3px);
-        /* Slight lift on hover */
         border-color: var(--accent);
+    }
+
+    section::before,
+    .about-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px; /* Adjust to your top border height */
+        background-image: url('icons/box_top.svg'); /* Adjust path if needed */
+        background-repeat: no-repeat;
+        background-size: contain; 
+        background-position: top center;
+        z-index: 1;
+    }
+
+    section::after,
+    .about-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px; /* Adjust to your bottom border height */
+        background-image: url('icons/box_bottom.svg'); /* Adjust path if needed */
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom center;
+        z-index: 1;
+    }
+
+    section > *,
+    .about-section > * {
+        position: relative;
+        z-index: 2;
     }
 
 .project-card {
