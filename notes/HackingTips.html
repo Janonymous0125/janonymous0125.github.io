@@ -36,7 +36,7 @@
                             weaknesses in how data is handled, validated, and transmitted across these layers. Here are some most common Web vulnerabilities I've learned during my research:
                         </p>
                         <ul>
-                            <li>Cross-Site Scripting (XSS)</li>
+                            <li><a href="#xss">Cross-Site Scripting (XSS)</a></li>
                             <li>SQL Injection (SQLi)</li>
                             <li>Cross-Site Request Forgery (CSRF)</li>
                             <li>Broken Authentication</li>
@@ -70,6 +70,106 @@
                             In this note we will look into the vulnerabilities mentioned above, How it is done, How to prevent it.
                         </p>
                     </div>
+                    <section id="xss">
+                        <h2>Cross-Site Scripting (XSS)</h2>
+                        <div class="note">
+                            <h3>Introduction to Cross-Site Scripting (XSS)</h3>
+                            <p>
+                                <strong>XSS (Cross-Site Scripting)</strong> is a security flaw typically found in web applications that occurs when untrusted data is included in a webpage without proper validation or escaping. Attackers use XSS to execute malicious scripts (usually JavaScript) in another user’s browser.
+                            </p>
+                            <p><strong>Impact of XSS:</strong></p>
+                            <ul>
+                                <li>Session hijacking</li>
+                                <li>Credential theft</li>
+                                <li>Defacement of websites</li>
+                                <li>Malware distribution</li>
+                                <li>Phishing attacks</li>
+                            </ul>
+                            <h3>Types of XSS</h3>
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Types</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Stored XSS</td>
+                                            <td>The malicious script is permanently stored on the server (e.g., in a database or comment section).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Reflected XSS</td>
+                                            <td>The script is reflected off a web server (e.g., in an error message, search result, etc.).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DOM-Based XSS</td>
+                                            <td>The vulnerability is in the client-side code, and the payload is never sent to the server.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="caption">Types of XSS</p>
+                            </div>
+                            <p>
+                                <strong>Stored XSS (Persistent):</strong> The attacker injects the malicious script into a website element that stores data (e.g., a comment field or forum post). This script is then permanently stored on the server. When other users visit the page containing this stored content, the malicious script is served to their browsers and executed.
+                            </p>
+                            <p>
+                                <strong>Reflected XSS (Non-Persistent):</strong> The malicious script is embedded in a link that the attacker sends to the victim (e.g., via email or social media). When the victim clicks the link, the script is sent to the vulnerable website as part of the request and then reflected back to the user's browser in the response, where it executes.
+                            </p>
+                            <p>
+                                <strong>DOM-based XSS:</strong> The vulnerability lies in the client-side JavaScript code itself. The attacker manipulates parts of the Document Object Model (DOM) in the victim's browser, causing the malicious script to be executed. The server doesn't necessarily need to be involved in reflecting the attack.
+                            </p>
+                            <h3>How XSS Works</h3>
+                            <p>
+                                XSS vulnerabilities occur when a web application includes user-provided data in its web pages without properly validating or encoding that data. This allows attackers to inject malicious code, which is then executed by the victim's browser when they view the compromised page.
+                            </p>
+                            <p><strong>The basic flow:</strong></p>
+                            <p>1) <strong>Attacker Identifies an Injection Point:</strong> The attacker finds a part of a website that accepts user input and displays it without proper sanitization. Common examples include:</p>
+                            <ul>
+                                <li>URL parameters</li>
+                                <li>Search boxes</li>
+                                <li>Comment forms</li>
+                                <li>Contact forms</li>
+                                <li>User profile fields</li>
+                            </ul>
+                            <p>2) <strong>Attacker Crafts a Malicious Payload:</strong> The attacker creates a malicious script, often using JavaScript, designed to perform harmful actions. Examples include:</p>
+                            <ul>
+                                <li>Stealing session cookies</li>
+                                <li>Redirecting users to malicious websites</li>
+                                <li>Displaying fake login forms to capture credentials</li>
+                                <li>Modifying the content of the web page</li>
+                                <li>Capturing keystrokes</li>
+                            </ul>
+                            <p>3) <strong>Attacker Delivers the Payload:</strong> The attacker needs to get the victim to interact with the webpage containing the malicious script. This can be done through Stored XSS, Reflected XSS or DOM-based XSS.</p>
+                            <p>4) <strong>Victim's Browser Executes the Script:</strong> Because the malicious script appears to originate from the trusted website, the victim's browser executes it.</p>
+                            <p>5) <strong>Malicious Actions are Performed:</strong> The injected script then carries out the attacker's intended actions within the context of the victim's browser and the compromised website.</p>
+                            <h3>How to find XSS Vulnerability in your Webpage</h3>
+                            <p>There are a lot of ways to find this kind of vulnerability in a webapplication or webpage. I'll share <strong>three</strong> most common way to find XSS vulnerability.</p>
+                            <p><strong>1) Manual Testing</strong></p>
+                            <p>
+                                Try injecting harmless scripts into user inputs (like URL parameters, Search boxes, Comments section, Contact forms, user profile fields):
+                            </p>
+                            <div class="code-block">
+                                <pre><code id="XSS-testing" class="language-python">&lt;script&gt;alert('XSS')&lt;/script&gt;</code></pre>
+                                <button class="copy-button" data-target="XSS-testing">Copy</button>
+                            </div>
+                            <p>If your web application is vulnerable a message will pop out saying XSS like the image shown below.</p>
+                            <div class="image-container">
+                                <img src="../images/xss-image-suceed.jpg" alt="xss-image-suceed">
+                                <p class="caption">XSS sucessful</p>
+                            </div>
+                            <p><strong>2) Browser Developer Tools</strong></p>
+                            <p>Every modern browser (Chrome, Firefox, Edge) has Developer Tools. You can open them by:</p>
+                            <ul>
+                                <li>Right-click on a page → Inspect, or</li>
+                                <li>Press F12 or Ctrl + Shift + I (Cmd + Option + I on Mac)</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+                <section id="under_construction">
+                    <h2>The content of this note is not ready. I'm trying my best to update this daily at 6pm (+8 GMT), thank you for your time. </h2>
                 </section>
             </main>
         </div>
