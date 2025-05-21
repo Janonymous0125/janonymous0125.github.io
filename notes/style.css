@@ -306,3 +306,51 @@ video, iframe {
     border-radius: 8px;
     cursor: pointer;
 }
+
+.code-block {
+    background-color: #282a36; 
+    border: 1px solid #44475a; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    position: relative;
+}
+
+    .code-block pre, .output-block pre {
+        margin: 0;
+        padding: 0;
+        font-family: monospace, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+        white-space: pre-wrap;
+        color: #f8f8f2;
+    }
+
+.output-block {
+    background-color: #383a59; 
+    border: 1px solid #50fa7b; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #44475a; /* Darker button background */
+    color: #f8f8f2; /* Light button text */
+    border: 1px solid #6272a4; /* Darker button border */
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+    .copy-button:hover {
+        opacity: 1;
+    }
