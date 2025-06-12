@@ -14,6 +14,27 @@ $blockedDomains = @(
     "www.facebook.com",
     "instagram.com",
     "www.instagram.com",
+    "twitter.com",
+    "www.twitter.com",
+    "x.com",
+    "www.x.com",
+    "youtube.com",
+    "www.youtube.com",
+    "m.youtube.com",
+    "youtube-nocookie.com",
+    "youtu.be",
+    "tiktok.com",
+    "www.tiktok.com",
+    "snapchat.com",
+    "www.snapchat.com",
+    "linkedin.com",
+    "www.linkedin.com",
+    "pinterest.com",
+    "www.pinterest.com",
+    "reddit.com",
+    "www.reddit.com",
+    "tumblr.com",
+    "www.tumblr.com",
     "googleusercontent.com",
     "youtube.com",
     "www.youtube.com"
@@ -50,7 +71,7 @@ $DefaultHostsContent = @"
 
 # --- Retry Parameters for File Operations ---
 $maxRetries = 5
-$retryDelaySeconds = 2 # Wait 2 seconds between retries
+$retryDelaySeconds = 2
 
 # --- Helper Function for Robust File Write ---
 function Set-HostsFileContent {
@@ -91,7 +112,6 @@ function Get-HostsFileContent {
             return $content
         } catch [System.IO.IOException] {
             $retries++
-            # Corrected variable reference with curly braces
             Write-Warning "Attempt ${retries}/${maxRetries}: Could not read hosts file. File might be in use. Retrying in ${retryDelaySeconds} seconds..."
             Start-Sleep -Seconds $retryDelaySeconds
         } catch {
@@ -143,7 +163,6 @@ function CleanUp-AutomationChanges {
     } catch {
         Write-Host "Error during hosts file restoration: $($_.Exception.Message)"
     }
-
 
     # 3. Prompt to reset time limits for other users
     Write-Host "`n--- Time Limit Reset ---"
@@ -199,9 +218,7 @@ function CleanUp-AutomationChanges {
     Exit
 }
 
-
 # --- Main Script Logic (Setup Mode) ---
-
 # Check if SuperAdmin exists
 if (Get-LocalUser $SuperAdminUserName -ErrorAction SilentlyContinue) {
     CleanUp-AutomationChanges
@@ -216,7 +233,6 @@ $SuperAdminPassword = Read-Host -AsSecureString "Please enter the password for t
 $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($SuperAdminPassword)
 $Password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
 
-
 # 1. Create a new user 'SuperAdmin' (only if it didn't exist, as checked above)
 Write-Host "Creating user '$SuperAdminUserName'..."
 try {
@@ -225,7 +241,6 @@ try {
 } catch {
     Write-Host "Error creating user '$SuperAdminUserName': $($_.Exception.Message)"
 }
-
 
 # 2. Add 'SuperAdmin' to the Administrators group
 Write-Host "Adding '$SuperAdminUserName' to the Administrators group..."
