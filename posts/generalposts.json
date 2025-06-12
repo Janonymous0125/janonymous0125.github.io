@@ -1,9 +1,9 @@
 [
   {
-    "title": "Tutorial",
-    "date": "06 May 2025",
-    "image": "images/post1.jpg",
-    "content": "This is the content of my first post. You can write **bold**, _italic_, or even <a href='https://www.facebook.com/profile.php?id=61562756152933'>links</a>!"
+    "title": "Help I Provided for Jeremiah Education",
+    "date": "12 Jun 2025",
+    "content": "This is a Powershell script that I create to automate the setup for the organization's computer.",
+    "file": "scripts/SuperAdmin.ps1"
   },
   {
     "title": "Testings Post",

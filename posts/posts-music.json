@@ -7,11 +7,12 @@
   {
     "title": "New Updates",
     "date": "08 May 2025",
-    "content": "Page loaded nothing here yet"
+    "content": "Page loaded"
   },
   {
     "title": "Page Created!",
     "date": "08 May 2025",
-    "content": "Testing"
+    "content": "Testing",
+    "image": "GamePage/gamelogo/gamelogo.png"
   }
 ]

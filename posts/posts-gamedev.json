@@ -8,13 +8,13 @@
   {
     "title": "New Updates",
     "date": "08 May 2025",
-    "content": "Nothing here yet this is for testing purpose only, download at your own risk",
+    "content": "Upadated Game: New Skin, New Weapons, New Armor",
     "file": "files/testing.zip"
   },
   {
-    "title": "Game's Webpage working in progress",
+    "title": "Game's Webpage",
     "date": "08 May 2025",
-    "content": "Game's webpage working in progress... Stay tune for the release",
+    "content": "The game have its own webpage now <a href='GamePage/GamePage.html'>click here</a>",
     "image": "images/GameWeb.jpg"
   }
 ]
