@@ -17,7 +17,17 @@
                 <h2>Contents</h2>
                 <nav>
                     <ul>
-                        <li><a href="#OTW">Bandit:OverTheWire</a></li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li>
+                            <details>
+                                <summary>Bandit : OverTheWire</summary>
+                                <ul>
+                                    <li><a href="#OTW-bandit">Bandit : Introduction</a></li>
+                                    <li><a href="#bandit0">Bandit : Level 0</a></li>
+                                    <li><a href="#bandit1">Bandit : Level 1</a></li>
+                                </ul>
+                            </details>
+                        </li>
                     </ul>
                 </nav>
             </aside>
@@ -26,10 +36,16 @@
                 <section id="introduction">
                     <div class="note">
                         <h2>Introduction to my Tips</h2>
-                        <p><strong>Disclaimer: ALL the skillsets that are provided here are only for Educational purpose ONLY.</strong></p>
+                        <p><strong>Disclaimer: ALL the skillsets that are provided here are only for Educational purpose ONLY. Any Illegal use of this skillset is a violation of law. Please ONLY use this on authorized system that you owned.</strong></p>
+                        <p>
+                            This notebook is not a course, this notebook are tips that you might not know or just getting started on penetration testing trying to find a guide throughout the learning curve.
+                        </p>
+                        <p>
+                            I would recommend you to get to know Linux; specifically Kali Linux for beginners. There are a lot of tools build in that beginners can go and explore.
+                        </p>
                     </div>
                 </section>
-                <section id="OTW">
+                <section id="OTW-bandit">
                     <div class="note">
                         <h2>Bandit:OverTheWire</h2>
                         <p>
@@ -44,9 +60,9 @@
                                 </div>
                             </div>
                         </div>
-                        <h3>Level 0 : Initial Login</h3>
+                        <h3 id="bandit0">Level 0 : Initial Login</h3>
                         <p>
-                            From the goals that the creator of Bandit, we know that we have to log into the game via <a href="https://manpages.ubuntu.com/manpages/noble/man1/ssh.1.html">OpenSSH</a>.
+                            Level 0 is the start of this game and the way you will be able to interact with host machine. From the goals that the creator of Bandit, we know that we have to log into the game via <a href="https://manpages.ubuntu.com/manpages/noble/man1/ssh.1.html">OpenSSH</a>.
                         </p>
                         <div class="image-grid">
                             <div class="image-grid">
@@ -69,16 +85,18 @@
                         <div class="output-block">
                             <pre><code id="ssh-bandit0" class="language-bash">ssh -p 2220 bandit0@bandit.labs.overthewire.org</code></pre>
                         </div>
+                        <p>
+                            After entering the command, enter the password; <em><strong>bandit0</strong></em>. You have successfully logged into level 0!
+                        </p>
                     </div>
                 </section>
             </main>
         </div>
         <div id="construction-modal" class="modal-overlay">
             <div class="modal-content">
-                <h2>⚠️ Page Under Construction ⚠️</h2>
-                <p>
-                    The content of this note is not ready. I'm trying my best to update this daily, thank you for your time. Click OK to continue reading, Go back homepage to go back to portfolio home.
-                </p>
+                <h2>😀 New Updates 😀</h2>
+                <p><strong>New tips added!!!</strong></p>
+                <p>Bandit:Level 0</p>
                 <button id="close-modal">OK</button>
                 <a id="home" href="https://janonymous0125.github.io/index.html" class="button">Go back homepage</a>
             </div>
