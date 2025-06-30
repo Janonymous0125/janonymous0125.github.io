@@ -1,5 +1,11 @@
 [
   {
+    "title": "New Hacking Tips",
+    "date": "29 Jun 2025",
+    "content": "Take a look at my walkthrough for a Wargame Challenge; Bandit by OverTheWire.",
+    "image": "notes/images/banditInt.jpg"
+  },
+  {
     "title": "Why Nmap?",
     "date": "07 May 2025",
     "content": "Nmap is a networking tools for scaning network devices, it has build in with a huge library of switches and scripts scanings for a variety of situations. <a href='https://nmap.org/download'>Click here</a> to go to the official website of Nmap",
