@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="futuristicCanvas"></canvas>
     <div class="container">
         <header>
             <h1>Hacking Tips and Tricks</h1>
@@ -18,6 +19,7 @@
                 <nav>
                     <ul>
                         <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#hackingnotes">Ethical Hacking Notes</a></li>
                         <li>
                             <details>
                                 <summary>Bandit : OverTheWire</summary>
@@ -43,6 +45,60 @@
                         <p>
                             I would recommend you to get to know Linux; specifically Kali Linux for beginners. There are a lot of tools build in that beginners can go and explore.
                         </p>
+                    </div>
+                </section>
+                <section id="hackingnotes">
+                    <div class="note">
+                        <h2>Ethical Hacking Notes</h2>
+                        <p><strong>'Hacking'</strong> in general is to find bug in a system and exploit them to get what we want OR to manipulate the system to do what we want which it is not built to do.</p>
+                        <div class="image-grid">
+                            <div class="image-container">
+                                <img src="https://techviral.net/wp-content/uploads/2017/08/Hackers.jpg" alt="Hackers">
+                                <p class="caption">Different types of Hackers</p>
+                            </div>
+                        </div>
+                        <p>
+                            Mainly Hackers are grouped together into three different groups. The most obvious difference between them are their Ethical guidelines.
+                        </p>
+                        <p>
+                            putting these into a table for visualization will be like this:
+                        </p>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                        <th>Working Experience</th>
+                                        <th>WiKi page</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>White-Hat Hackers</td>
+                                        <td>Ethical hackers who legally and with permission find and fix security vulnerabilities to improve system defenses. They are the "good guys" of cybersecurity.</td>
+                                        <td>To proactively improve security for organizations and individuals.</td>
+                                        <td><a href="https://en.wikipedia.org/wiki/White_hat_(computer_security)">Click Here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gray-Hat Hackers</td>
+                                        <td>
+                                            Operate in a morally ambiguous zone. They hack into systems without permission, but typically with the intent to expose vulnerabilities to the owner, sometimes seeking a fee for their findings.
+                                            Their actions are often illegal, even if their intentions aren't purely malicious.
+                                        </td>
+                                        <td>Often a mix of curiosity, a desire to expose vulnerabilities, and sometimes a hope for financial reward.</td>
+                                        <td><a href="https://en.wikipedia.org/wiki/Grey_hat">Click Here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Black-Hat Hackers</td>
+                                        <td>Malicious actors who illegally hack into systems for personal gain, to cause harm, or for other nefarious purposes. They are the "bad guys" of the hacking world, engaging in cybercrime, data theft, and disruption.</td>
+                                        <td>To cause harm, steal data, extort money, or achieve personal/political objectives.</td>
+                                        <td><a href="https://en.wikipedia.org/wiki/Black_hat_(computer_security)">Click Here</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="caption">Types of Hackers</p>
+                        </div>
                     </div>
                 </section>
                 <section id="OTW-bandit">
@@ -73,6 +129,15 @@
                             </div>
                         </div>
                         <p>
+                            From the above, we can gather the infomation below:
+                        </p>
+                        <ul>
+                            <li>Host: bandit.labs.overthewire.org</li>
+                            <li>Running port: 2220</li>
+                            <li>User: bandit0</li>
+                            <li>Password: bandit0</li>
+                        </ul>
+                        <p>
                             The credentials of user bandit0 is already given, the host and port of the game is given as well. All we need is to log into the game using the infomation given to start. The format of the ssh command is at the following:
                         </p>
                         <div class="code-block">
@@ -86,7 +151,150 @@
                             <pre><code id="ssh-bandit0" class="language-bash">ssh -p 2220 bandit0@bandit.labs.overthewire.org</code></pre>
                         </div>
                         <p>
-                            After entering the command, enter the password; <em><strong>bandit0</strong></em>. You have successfully logged into level 0!
+                            After entering the command, enter the password; <em><strong>bandit0</strong></em> which is given by the creator in the goal of the level. You have successfully beated level 0! Please read the rules and do not break them...
+                        </p>
+                        <div class="image-grid">
+                            <div class="image-grid">
+                                <div class="image-container">
+                                    <img src="images/bandit1-initiallogin.jpg" alt="Success">
+                                    <p class="caption">Level 0 Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="bandit1">Level 0 → Level 1 : Reading Files with CLI through OpenSSH</h3>
+                        <div class="image-grid">
+                            <div class="image-grid">
+                                <div class="image-container">
+                                    <img src="images/bandit1-goals.jpg" alt="Goals">
+                                    <p class="caption">Bandit1 Goals</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            From the above, we can gather the infomation below:
+                        </p>
+                        <ul>
+                            <li>The password is stored in the readme file.</li>
+                            <li>The readme file is located in the home directory of the current level. (<em>bandit0</em>)</li>
+                            <li>We need to use the password from the readme file to login to the next level.</li>
+                            <li><em>Hint: "bandit1" is the username for the next level.</em></li>
+                        </ul>
+                        <p>
+                            Continuing from last level, we can find our directory using <code>pwd</code> command. <code>pwd</code> stands for Print Working Directory. This helps us to know where we are and where we are workinng on.
+                        </p>
+                        <div class="code-block">
+                            <pre><code><green>bandit0@bandit</green>:<blue><strong>~</strong></blue>$ pwd
+/home/bandit0</code></pre>
+                        </div>
+                        <p>
+                            From the output of the <code>pwd</code> command, we know that we are already in the home directory of the current level. Then by running the <code>ls</code> command, this will list all the files in the current directory.
+                        </p>
+                        <div class="code-block">
+                            <pre><code><green>bandit0@bandit</green>:<blue><strong>~</strong></blue>$ ls
+readme</code></pre>
+                        </div>
+                        <p>
+                            Now that we know that the readme file contains the password for the next level. There are two main ways to retrieve the password from the file. Use of CLI Tools like 'cat' OR text editor. For example:
+                        </p>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Command</th>
+                                        <th>Short Description</th>
+                                        <th>Jump to walkthrough</th>
+                                        <th>Link to Manual</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>cat</td>
+                                        <td>Concatenate files and print on the standard output</td>
+                                        <td><a href="#catwt1">cat</a></td>
+                                        <td><a href="https://manpages.ubuntu.com/manpages/noble/man1/cat.1.html">Click Here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>nano</td>
+                                        <td>Nano's ANOther text editor, inspired by Pico</td>
+                                        <td><a href="#nanowt1">nano</a></td>
+                                        <td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/nano.1.html">Click Here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>vi</td>
+                                        <td>Screen-oriented (visual) display editor</td>
+                                        <td><a href="#viwt1">vi</a></td>
+                                        <td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/vi.1posix.html">Click Here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>vim</td>
+                                        <td>Vi IMproved, a programmer's text editor</td>
+                                        <td><a href="#vimwt1">vim</a></td>
+                                        <td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/vim.1.html">Click Here</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="caption">Example Table 1</p>
+                        </div>
+                        <div id="catwt1">
+                            <h3>Walkthrough : cat</h3>
+                            <p><strong>'cat'</strong> is a tool built into linux systems. The command prints the content of the file to the console.</p>
+                            <div class="image-grid">
+                                <div class="image-grid">
+                                    <div class="image-container">
+                                        <img src="images/bandit1-catcompleted.jpg" alt="Goals">
+                                        <p class="caption">Bandit1 Complete</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="nanowt1">
+                            <h3>Walkthrough : nano</h3>
+                            <p><strong>'nano'</strong> is a command line text editor. We can use text editor to read the content of the file too.</p>
+                            <div class="code-block">
+                                <pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ nano readme</code></pre>
+                            </div>
+                            <div class="image-grid">
+                                <div class="image-grid">
+                                    <div class="image-container">
+                                        <img src="images/bandit1-nanocompleted.jpg" alt="Goals">
+                                        <p class="caption">Bandit1 Complete</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="viwt1">
+                            <h3>Walkthrough : vi</h3>
+                            <p><strong>'vi'</strong> is also a command line text editor with much more powerful features.</p>
+                            <div class="code-block">
+                                <pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ vi readme</code></pre>
+                            </div>
+                            <div class="image-grid">
+                                <div class="image-grid">
+                                    <div class="image-container">
+                                        <img src="images/bandit1-vicompleted.jpg" alt="Goals">
+                                        <p class="caption">Bandit1 Complete</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="vimwt1">
+                            <h3>Walkthrough : vim</h3>
+                            <p><strong>'vim'</strong> is a IMproved version of vi. Similar to vi but with even more tools added to the commands</p>
+                            <div class="code-block">
+                                <pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ vim readme</code></pre>
+                            </div>
+                            <div class="image-grid">
+                                <div class="image-grid">
+                                    <div class="image-container">
+                                        <img src="images/bandit1-vimcompleted.jpg" alt="Goals">
+                                        <p class="caption">Bandit1 Complete</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            After we get the password please note it down somewhere you can reach easily... Taking notes will let you know where you left off and you can log back in.... if you forgotten the password or you didnt note it somewhere in your local machine you might
+                            need to start over again.
                         </p>
                     </div>
                 </section>
@@ -95,10 +303,12 @@
         <div id="construction-modal" class="modal-overlay">
             <div class="modal-content">
                 <h2>😀 New Updates 😀</h2>
+                <small>1 July 2025</small>
                 <p><strong>New tips added!!!</strong></p>
-                <p>Bandit:Level 0</p>
+                <p>Bandit:Level 1</p>
+                <p>Hacking Notes</p>
                 <button id="close-modal">OK</button>
-                <a id="home" href="https://janonymous0125.github.io/index.html" class="button">Go back homepage</a>
+                <a id="home" href="https://janonymous0125.github.io/index.html" class="button">Go Back</a>
             </div>
         </div>
         <footer class="footer">
@@ -122,30 +332,7 @@
             <p>© 2025 ZhiQi</p>
         </footer>
     </div>
-    <script>
-        window.addEventListener("load", () => {
-            const modal = document.getElementById("construction-modal");
-            const closeBtn = document.getElementById("close-modal");
-
-            modal.style.display = "flex";
-
-            closeBtn.addEventListener("click", () => {
-                modal.style.display = "none";
-            });
-        });
-    </script>
-    <script>
-        window.addEventListener("load", () => {
-            const modal = document.getElementById("construction-modal");
-            const closeBtn = document.getElementById("close-modal");
-
-            modal.style.display = "flex";
-
-            closeBtn.addEventListener("click", () => {
-                modal.style.display = "none";
-            });
-        });
-    </script>
     <script src="script.js"></script>
+    <script src="animation.js"></script>
 </body>
 </html>

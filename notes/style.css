@@ -6,22 +6,43 @@ body {
     background-color: #222222;
 }
 
+/* Define CSS Variables for consistency and easier theming (optional but good practice) */
+:root {
+    --primary-bg: #222222;
+    --secondary-bg: #333333;
+    --sidebar-bg: rgba(34, 34, 34, 0.9);
+    --main-content-bg: rgba(34, 34, 34, 0.85);
+    --text-color: #d4d4d4;
+    --accent-color: #89cff0; /* A light blue for highlights */
+    --hover-color: #a7d1eb;
+    --border-color: #444444;
+    --secondary-border-color: #666666;
+    --code-bg: #282a36;
+    --code-border: #44475a;
+    --output-bg: #383a59;
+    --output-border: #50fa7b; /* A green for output highlighting */
+    --card: #333333; /* Used for footer and modal-content background */
+    --sci-fi-glow: rgba(0, 224, 255, 0.4); /* Sci-fi glow effect */
+    --sci-fi-border: rgba(0, 224, 255, 0.2); /* Sci-fi border effect */
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #333333;
+    background-color: var(--secondary-bg);
     border-left: none;
     border-right: none;
 }
 
 header {
     background-color: rgba(51, 51, 51, 0.8);
-    color: #89cff0;
+    color: var(--accent-color);
     padding: 1.5em 20px;
     text-align: center;
     margin-bottom: 2px;
-    border-bottom: 1px solid #444444;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .content-wrapper {
@@ -32,19 +53,19 @@ header {
 
 .sidebar {
     width: 220px;
-    background-color: rgba(34, 34, 34, 0.9);
-    color: #89cff0;
+    background-color: var(--sidebar-bg);
+    color: var(--accent-color);
     padding: 20px;
     border-radius: 5px;
     margin-right: 20px;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
     overflow-y: auto;
-    border: 1px solid #444444;
+    border: 1px solid var(--border-color);
 }
 
     .sidebar h2 {
-        color: #89cff0;
-        border-bottom: 1px solid #666666;
+        color: var(--accent-color);
+        border-bottom: 1px solid var(--secondary-border-color);
         padding-bottom: 10px;
         margin-bottom: 15px;
         text-align: left;
@@ -62,7 +83,7 @@ header {
     }
 
     .sidebar nav a {
-        color: #a7d1eb;
+        color: var(--hover-color);
         text-decoration: none;
         display: block;
         padding: 6px 10px;
@@ -71,25 +92,25 @@ header {
     }
 
         .sidebar nav a:hover {
-            color: #89cff0;
-            border-left: 2px solid #89cff0;
+            color: var(--accent-color);
+            border-left: 2px solid var(--accent-color);
         }
 
 main {
     flex-grow: 1;
-    background-color: rgba(34, 34, 34, 0.85);
-    color: #d4d4d4;
+    background-color: var(--main-content-bg);
+    color: var(--text-color);
     padding: 25px;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     overflow: auto;
-    border: 1px solid #444444;
+    border: 1px solid var(--border-color);
 }
 
     main section {
         margin-bottom: 35px;
         padding: 15px 0;
-        border-bottom: 1px solid #666666;
+        border-bottom: 1px solid var(--secondary-border-color);
     }
 
         main section:last-child {
@@ -97,15 +118,15 @@ main {
         }
 
     main h2 {
-        color: #89cff0;
-        border-bottom: 2px solid #666666;
+        color: var(--accent-color);
+        border-bottom: 2px solid var(--secondary-border-color);
         padding-bottom: 10px;
         margin-bottom: 20px;
         font-size: 1.4em;
     }
 
 .note h3 {
-    color: #a7d1eb;
+    color: var(--hover-color);
     margin-top: 0;
     font-size: 1.1em;
 }
@@ -128,9 +149,9 @@ main {
     .image-container img, .graph-container img, .concept-map-container img {
         max-width: 100%;
         height: auto;
-        border: 1px solid #666666;
+        border: 1px solid var(--secondary-border-color);
         border-radius: 3px;
-        background-color: #222222;
+        background-color: var(--primary-bg);
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     }
 
@@ -138,18 +159,18 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 15px 0;
-    color: #d4d4d4;
+    color: var(--text-color);
 }
 
 th, td {
-    border: 1px solid #666666;
+    border: 1px solid var(--secondary-border-color);
     padding: 10px;
     text-align: left;
 }
 
 th {
     background-color: rgba(102, 102, 102, 0.2);
-    color: #89cff0;
+    color: var(--accent-color);
     font-weight: bold;
 }
 
@@ -159,7 +180,7 @@ tbody tr:nth-child(even) {
 
 .caption {
     font-size: 0.95em;
-    color: #a7d1eb;
+    color: var(--hover-color);
     margin-top: 8px;
     text-align: center;
 }
@@ -173,9 +194,9 @@ tbody tr:nth-child(even) {
 video, iframe {
     width: 100%;
     height: auto;
-    border: 1px solid #666666;
+    border: 1px solid var(--secondary-border-color);
     border-radius: 3px;
-    background-color: #222222;
+    background-color: var(--primary-bg);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -205,7 +226,6 @@ video, iframe {
             height: 32px;
             filter: brightness(1.1);
         }
-}
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
@@ -221,7 +241,7 @@ video, iframe {
         border-radius: 0;
         box-shadow: none;
         padding: 15px;
-        border: 1px solid #666666;
+        border: 1px solid var(--secondary-border-color);
     }
 
     main {
@@ -229,7 +249,7 @@ video, iframe {
         border-radius: 0;
         box-shadow: none;
         padding: 15px;
-        border: 1px solid #666666;
+        border: 1px solid var(--secondary-border-color);
     }
 
     .image-grid {
@@ -266,6 +286,7 @@ video, iframe {
     }
 }
 
+/* --- Modal Styles --- */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -282,7 +303,7 @@ video, iframe {
 
 .modal-content {
     background-color: var(--card);
-    color: var(--text);
+    color: var(--text-color);
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
@@ -293,28 +314,63 @@ video, iframe {
 
     .modal-content h2 {
         margin-top: 0;
-        color: var(--accent);
+        color: var(--accent-color);
+        line-height: 1.2; /* Adjust line-height for closer heading text */
     }
+
+        /* Style for the date inside the modal heading */
+        .modal-content h2 small {
+            display: block;
+            font-size: 0.7em;
+            color: #cccccc;
+            margin-top: 2px; /* Adjusted to bring it closer */
+        }
 
 #close-modal {
     margin-top: 1.5rem;
     padding: 0.5rem 1.2rem;
     font-size: 1rem;
-    background-color: var(--accent);
+    background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+    #close-modal:hover {
+        background-color: #6fb2d3; /* Slightly darker/different shade on hover */
+    }
+
+/* Style for the 'Go back homepage' button */
+.modal-content .button {
+    display: inline-block;
+    margin-top: 1rem; /* Space between buttons/content */
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    background-color: var(--output-border); /* Using a green accent color for this button */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .modal-content .button:hover {
+        background-color: #44cc6a; /* Darker green on hover */
+    }
+
+
+/* --- Code and Output Block Styles --- */
 .code-block {
-    background-color: #282a36; 
-    border: 1px solid #44475a; 
+    background-color: var(--code-bg);
+    border: 1px solid var(--code-border);
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
     overflow-x: auto;
-    position: relative;
+    position: relative; /* Needed for positioning the copy button */
 }
 
     .code-block pre, .output-block pre {
@@ -323,13 +379,31 @@ video, iframe {
         font-family: monospace, sans-serif;
         font-size: 14px;
         line-height: 1.4;
-        white-space: pre-wrap;
+        white-space: pre-wrap; /* Allows long lines to wrap */
         color: #f8f8f2;
     }
 
+    .code-block red {
+        font-family: monospace, sans-serif;
+        font-size: 14px;
+        color: #ff2d00;
+    }
+
+    .code-block green {
+        font-family: monospace, sans-serif;
+        font-size: 14px;
+        color: #50fa7b;
+    }
+
+    .code-block blue {
+        font-family: monospace, sans-serif;
+        font-size: 14px;
+        color: #8be9fd;
+    }
+
 .output-block {
-    background-color: #383a59; 
-    border: 1px solid #50fa7b; 
+    background-color: var(--output-bg);
+    border: 1px solid var(--output-border);
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -355,23 +429,26 @@ video, iframe {
         opacity: 1;
     }
 
-/* Style for the dropdown summary (the clickable part) */
+/* --- Sidebar Dropdown (details/summary) Styles --- */
 .sidebar nav summary {
-    color: #89cff0; /* Matches sidebar heading color */
+    color: var(--accent-color);
     padding: 6px 10px;
     cursor: pointer;
     border-left: 2px solid transparent;
     transition: border-left 0.2s ease;
-    list-style: none; /* Remove default marker */
+    list-style: none; /* Remove default browser marker */
+    display: flex; /* Use flexbox for alignment of arrow and text */
+    align-items: center;
 }
 
-    /* Add a custom arrow for the summary */
+    /* Hide default marker in WebKit browsers */
     .sidebar nav summary::-webkit-details-marker {
-        display: none; /* Hide default marker in WebKit browsers */
+        display: none;
     }
 
+    /* Custom arrow for the summary */
     .sidebar nav summary::before {
-        content: '\25B6'; /* Right-pointing triangle */
+        content: '\25B6'; /* Right-pointing triangle character */
         display: inline-block;
         margin-right: 8px;
         transition: transform 0.2s ease;
@@ -383,8 +460,8 @@ video, iframe {
 
 /* Hover effect for the summary */
 .sidebar nav summary:hover {
-    color: #a7d1eb; /* Slightly lighter on hover */
-    border-left: 2px solid #89cff0;
+    color: var(--hover-color);
+    border-left: 2px solid var(--accent-color);
 }
 
 /* Style for the dropdown content (the ul inside details) */
@@ -392,25 +469,43 @@ video, iframe {
     list-style: none;
     padding-left: 20px; /* Indent sub-items */
     margin: 5px 0;
-    border-left: 1px solid #444444; /* Subtle line for hierarchy */
+    border-left: 1px solid var(--border-color); /* Subtle line for hierarchy */
 }
 
     /* Style for the sub-category links */
     .sidebar nav details ul li a {
         padding: 4px 10px;
         font-size: 0.95em;
-        color: #a7d1eb;
+        color: var(--hover-color);
         text-decoration: none;
         display: block;
-        transition: color 0.2s ease;
+        transition: color 0.2s ease, background-color 0.2s ease;
     }
 
         .sidebar nav details ul li a:hover {
-            color: #89cff0;
+            color: var(--accent-color);
             background-color: rgba(137, 207, 240, 0.1); /* Light background on hover */
         }
 
 /* Adjust padding for top-level list items that are not dropdowns */
 .sidebar nav > ul > li > a {
     padding: 6px 10px;
+}
+
+#futuristicCanvas {
+    position: fixed; /* Fixes it to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Puts it behind all other content */
+    background-color: #222222; /* Ensures consistent dark background */
+}
+
+.container {
+    background-color: rgba(51, 51, 51, 0.9); /* Example: Add transparency to container background */
+}
+
+header, .sidebar, main {
+    background-color: rgba(34, 34, 34, 0.85); /* Example: Add transparency to content backgrounds */
 }
