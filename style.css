@@ -84,8 +84,8 @@ form,
     box-shadow: 0 0 10px var(--sci-fi-glow);
     transition: all 0.3s ease;
     border: 1px solid var(--sci-fi-border);
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
 }
 
     section:hover,
@@ -109,7 +109,7 @@ form,
         height: 80px; /* Adjust to your top border height */
         background-image: url('icons/box_top.svg'); /* Adjust path if needed */
         background-repeat: no-repeat;
-        background-size: contain; 
+        background-size: contain;
         background-position: top center;
         z-index: 1;
     }
@@ -690,40 +690,40 @@ h2 {
 
 /* Contact Form Styles */
 .contact-container {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 2rem auto;
-    max-width: 800px; 
+    max-width: 800px;
     padding: 1rem;
-    background: var(--card); 
+    background: var(--card);
     border-radius: 10px;
-    box-shadow: 0 0 10px var(--sci-fi-glow); 
-    border: 1px solid var(--sci-fi-border); 
+    box-shadow: 0 0 10px var(--sci-fi-glow);
+    border: 1px solid var(--sci-fi-border);
 }
 
     .contact-container h1 {
-        color: var(--accent); 
+        color: var(--accent);
         margin-bottom: 1.5rem;
     }
 
     .contact-container form {
-        width: 100%; 
-        max-width: 700px; 
-        background: none; 
-        box-shadow: none; 
-        border: none; 
-        padding: 0; 
-        margin: 0; 
+        width: 100%;
+        max-width: 700px;
+        background: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
     }
 
     .contact-container iframe {
-        width: 100%; 
-        height: 700px; 
-        border: 1px solid var(--sci-fi-border); 
-        border-radius: 8px; 
-        box-shadow: 0 0 8px var(--sci-fi-glow); 
-        background-color: var(--bg); 
+        width: 100%;
+        height: 700px;
+        border: 1px solid var(--sci-fi-border);
+        border-radius: 8px;
+        box-shadow: 0 0 8px var(--sci-fi-glow);
+        background-color: var(--bg);
     }
 
 @media (max-width: 768px) {
@@ -733,6 +733,270 @@ h2 {
     }
 
         .contact-container iframe {
-            height: 600px; 
+            height: 600px;
+        }
+}
+
+/* Resume Timeline Styles - MODIFIED FOR HORIZONTAL LAYOUT */
+.resume-section {
+    max-width: 1200px; /* Increased max-width for horizontal layout */
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--sci-fi-glow);
+    border: 1px solid var(--sci-fi-border);
+    text-align: center;
+}
+
+    .resume-section h2 {
+        font-size: 2rem;
+        color: var(--accent);
+        margin-bottom: 2rem;
+        font-family: 'CustomFont', sans-serif;
+        font-weight: 300;
+    }
+
+.timeline {
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Changed from space-between to flex-start for continuous line */
+    align-items: flex-start; /* Aligns items to the top of the flex container */
+    padding-top: 100px; /* Creates space above the items for the line to sit */
+    padding-bottom: 50px; /* Some bottom padding for overall spacing */
+    overflow-x: auto; /* Allows horizontal scrolling if content overflows */
+    scroll-snap-type: x mandatory; /* Optional: Snap to items on scroll */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    margin: 0 auto 3rem auto;
+    min-height: 250px; /* Minimum height for the timeline container */
+    width: 100%; /* Ensures timeline takes full width to allow scrolling */
+}
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        height: 4px; /* Horizontal line */
+        background-color: var(--sci-fi-border);
+        left: 0;
+        right: 0; /* Extend across the timeline */
+        top: 90px; /* Adjusted: Moves the line up to 90px from the top of .timeline */
+        border-radius: 2px;
+        z-index: 0; /* Ensures line is behind dots and content */
+    }
+
+.timeline-item {
+    flex: 0 0 auto; /* Prevent items from stretching/shrink, allow content width */
+    min-width: 280px; /* Minimum width for each item */
+    max-width: 350px; /* Maximum width for each item */
+    margin: 0 15px; /* Spacing between items */
+    position: relative; /* Allows positioning of dot relative to this item */
+    opacity: 0;
+    transform: translateY(20px); /* Initial state for animation */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    scroll-snap-align: center; /* Optional: Snap point for scrolling */
+    display: flex; /* Flex container for dot and content */
+    flex-direction: column; /* Stack dot and content vertically */
+    align-items: center; /* Center content horizontally within item */
+    text-align: center; /* Center text within item */
+    z-index: 1; /* Bring timeline item content above the line */
+}
+
+    .timeline-item.in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* No more odd/even left/right positioning for horizontal timeline */
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: auto;
+        padding-right: auto;
+        padding-left: auto;
+        text-align: center; /* Ensure text is centered for all items */
+    }
+
+.timeline-dot {
+    position: absolute; /* Position relative to .timeline-item */
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    /* This calculation positions the dot's center at 90px from the top of the .timeline container.
+       Since .timeline-item's effective top is at 100px due to padding, the dot needs a negative top.
+       90px (line top) - 100px (item top) = -10px. Then subtract half dot height (8px).
+    */
+    top: -18px; /* Adjusted: Position to align with the horizontal line above the content */
+    left: 50%; /* Center horizontally within its item */
+    transform: translateX(-50%); /* Adjust to truly center the dot */
+    z-index: 2; /* Ensure dot is on top of content and line */
+    border: 2px solid var(--sci-fi-border);
+    box-shadow: 0 0 8px var(--accent);
+}
+
+.timeline-content {
+    background: var(--bg);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--sci-fi-glow);
+    border: 1px solid var(--sci-fi-border);
+    position: relative;
+    color: var(--text);
+    margin-top: 20px; /* Adjusted: Space between the dot (which is now above) and the content card */
+}
+
+    .timeline-content h3 {
+        color: var(--accent);
+        margin-top: 0;
+        font-size: 1.4rem;
+        font-family: 'CustomFont', sans-serif;
+        font-weight: bold;
+    }
+
+    .timeline-content h4 {
+        color: var(--text);
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        font-family: 'CustomFont', sans-serif;
+        font-weight: 300;
+    }
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    text-align: left;
+    color: var(--text);
+}
+
+.timeline-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Skills and Hobbies Section */
+.skills-hobbies {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1rem;
+    background: var(--card);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--sci-fi-glow);
+    border: 1px solid var(--sci-fi-border);
+}
+
+    .skills-hobbies h3 {
+        font-size: 1.8rem;
+        color: var(--accent);
+        margin-bottom: 1.5rem;
+        font-family: 'CustomFont', sans-serif;
+        font-weight: bold;
+    }
+
+.skills-grid,
+.hobbies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.skill-item,
+.hobby-item {
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 0.75rem 1.25rem;
+    border-radius: 20px;
+    border: 1px solid var(--sci-fi-border);
+    box-shadow: 0 0 5px var(--sci-fi-glow);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+}
+
+    .skill-item:hover,
+    .hobby-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 10px var(--accent);
+    }
+
+
+/* Resume Download Button */
+.resume-download {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#downloadResumeBtn {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: 'CustomFont', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px var(--sci-fi-glow);
+}
+
+    #downloadResumeBtn:hover {
+        background-color: #00b3cc;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px var(--sci-fi-glow);
+    }
+
+/* Responsive adjustments for horizontal timeline */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+        padding: 20px 0; /* Vertical padding for vertical layout */
+        overflow-x: hidden; /* No horizontal scroll for vertical layout */
+        min-height: auto; /* Allow height to adjust */
+    }
+
+        .timeline::after {
+            height: 100%; /* Vertical line again */
+            width: 4px;
+            left: 50%; /* Center vertically */
+            top: 0;
+            transform: translateX(-2px); /* Adjust for centering */
+        }
+
+    .timeline-item {
+        width: 90%; /* Take more width */
+        max-width: none; /* Remove max-width */
+        margin: 15px 0; /* Vertical margin */
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 40px; /* Space for dot and line */
+        text-align: left; /* Align text to left */
+        flex-direction: row; /* Dot and content side-by-side */
+        justify-content: flex-start; /* Align content to start */
+        top: auto; /* Reset top positioning for vertical layout */
+        transform: translateY(0); /* Reset transform */
+    }
+
+        .timeline-item .timeline-dot {
+            position: absolute;
+            left: 12px; /* Position dot on the vertical line */
+            top: 25px; /* Adjust top positioning for dot */
+            transform: none; /* Remove horizontal translation */
+        }
+
+    .timeline-content {
+        margin-top: 0; /* No top margin needed for side-by-side */
+        margin-left: 20px; /* Space between dot and content */
+        flex: 1; /* Allow content to fill remaining space */
+    }
+
+        .timeline-content ul {
+            padding-left: 15px;
         }
 }
