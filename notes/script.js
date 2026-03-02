@@ -100,23 +100,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // --- Construction Modal Logic ---
-    const modal = document.getElementById("construction-modal");
-    const closeBtn = document.getElementById("close-modal");
-
-    if (modal && closeBtn) { // Ensure elements exist before adding listeners
-        modal.style.display = "flex"; // Show the modal initially
-
-        closeBtn.addEventListener("click", () => {
-            modal.style.display = "none"; // Hide modal on close button click
-        });
-
-        // Optional: Close modal if clicked outside of modal-content
-        modal.addEventListener('click', function (event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    }
 
 });

@@ -1,76 +1,152 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Development</title>
+    <meta name="description" content="Game development portfolio featuring Unreal Engine experiments, project logs, and interactive worldbuilding work by Jeremiah Wong Zhi Qi." />
+    <link rel="canonical" href="https://janonymous0125.github.io/GameDev.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Game Development Projects | Jeremiah Wong Zhi Qi" />
+    <meta property="og:description" content="Game development portfolio featuring Unreal Engine experiments, project logs, and interactive worldbuilding work by Jeremiah Wong Zhi Qi." />
+    <meta property="og:url" content="https://janonymous0125.github.io/GameDev.html" />
+    <meta property="og:image" content="https://janonymous0125.github.io/images/GameWeb.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Game Development Projects | Jeremiah Wong Zhi Qi" />
+    <meta name="twitter:description" content="Game development portfolio featuring Unreal Engine experiments, project logs, and interactive worldbuilding work by Jeremiah Wong Zhi Qi." />
+    <meta name="twitter:image" content="https://janonymous0125.github.io/images/GameWeb.jpg" />
+    <title>Game Development Projects | Jeremiah Wong Zhi Qi</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="shared-chrome-config.js"></script>
+    <script defer src="shared-header.js"></script>
     <script defer src="script.js"></script>
-    <script defer src="GDload-posts.js"></script>
-
+    <script defer src="load-posts.js"></script>
+    <script defer src="shared-footer.js"></script>
 </head>
 <body>
-    <header>
+    <div data-shared-header data-page-key="gamedev" data-page-title="Game Development"></div>
+    <noscript>
+      <header>
         <h1>Game Development</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown">
-                <button class="dropdown-toggle">Blog ▾</button>
-                <div class="dropdown-content">
-                    <a href="blog.html">General Blog</a>
-                    <a href="CyberSec.html">Cyber Security</a>
-                    <a href="GameDev.html">Game Development</a>
-                    <a href="MusicP.html">Music Production</a>
-                    <a href="VideoEditing.html">Video Editing</a>
-                </div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="dropdown open-current">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">Blog ▾</button>
+            <div class="dropdown-content">
+              <a href="blog.html">General Blog</a>
+              <a href="CyberSec.html">Cyber Security</a>
+              <a href="GameDev.html" aria-current="page">Game Development</a>
+              <a href="MusicP.html">Music Production</a>
+              <a href="VideoEditing.html">Video Editing</a>
             </div>
-            <a href="contact.html">Contact</a>
-            <button id="darkModeToggle">🌓</button>
+          </div>
+          <a href="contact.html">Contact</a>
+          <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" disabled>🌓</button>
         </nav>
-    </header>
+      </header>
+    </noscript>
 
     <div class="page-content transition">
-        <main>
-            <section class="topic-header">
-                <h1>My Game Developing Story</h1>
-                <p>
-                    I love playing games with family and friends, it pulls our relationships closer. When I was 8 years-old, my father and I would sit infront of the big and bonky computer
-                    playing Command & Conquer:Generals (Zero Hour) that was the first game Ive played with my dad. Soon after, My curiosity grew with my age. I wanted to build a game that 
-                    has never been seen, a great open world multiplayer game where every player has their own story. 
-                </p>
-                <p>
-                    I started my research on the 8th of August 2024, learning Unreal Engine. I choose Unreal because it has a big community and if you need help with anything tutorials, online 
-                    forums are very easy to find, you can ask online too if you can't find any helpful documentation. Due to the size of it's community there are a lot of people willing to help out.
-                </p>
+        <main class="consistency-shell">
+            <section class="home-hero consistency-hero">
+                <div class="home-hero-copy">
+                    <p class="hero-kicker">Creative technology</p>
+                    <h2>Using game development as a space to learn systems thinking, worldbuilding, and technical execution.</h2>
+                    <p class="hero-summary">Game development is one of the most creative parts of this portfolio. It gives me a place to experiment with Unreal Engine, interactive ideas, and project workflows that also strengthen broader technical problem solving.</p>
+                    <div class="hero-cta-group">
+                        <a href="#gamedev-posts" class="hero-btn hero-btn-primary">View Project Logs</a>
+                        <a href="index.html#featured-projects" class="hero-btn hero-btn-secondary">Back to Featured Work</a>
+                    </div>
+                </div>
+
+                <div class="hero-identity-meta">
+                    <p class="hero-identity-label">Creative lane</p>
+                    <h3>Prototype-driven and systems-oriented</h3>
+                    <ul>
+                        <li>Unreal Engine exploration</li>
+                        <li>Worldbuilding and gameplay ideas</li>
+                        <li>Project logs tied to ongoing development</li>
+                    </ul>
+                </div>
             </section>
-            
-            <section class="topic-header">
-                <h1>Game Blogs</h1>
-                <p>Updates on what game Im working on.</p>
-                <p class="topic-body" id="post-list">Loading posts...</p>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Approach</p>
+                    <h2>Why game development matters in this portfolio</h2>
+                    <p>Game development sits alongside cybersecurity and scripting as another way I learn by building. It trains planning, iteration, debugging, and system design while giving room for more creative experimentation.</p>
+                </div>
+                <div class="consistency-feature-grid">
+                    <article class="strength-card">
+                        <h3>Interactive Design</h3>
+                        <p>Exploring environments, systems, and experiences that feel coherent from both a player and builder perspective.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Technical Experimentation</h3>
+                        <p>Using game prototypes to test workflows, logic, tools, and implementation ideas in a more dynamic setting.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Long-Term Worldbuilding</h3>
+                        <p>Turning ideas into something more structured through narrative direction, systems thinking, and iteration.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel" id="gamedev-posts">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Project logs</p>
+                    <h2>Game development updates</h2>
+                </div>
+                <div class="topic-body consistency-post-list" id="post-list" data-posts-json="posts/posts-gamedev.json" data-download-label="📎 Download File">Loading posts...</div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Current direction</p>
+                    <h2>What I am trying to improve through this work</h2>
+                </div>
+                <div class="consistency-two-column">
+                    <article class="proof-card">
+                        <h3>Tools and Engine</h3>
+                        <p>Unreal Engine is the main environment I use for these experiments because it supports both visual iteration and deeper systems work.</p>
+                    </article>
+                    <article class="proof-card">
+                        <h3>Project mindset</h3>
+                        <p>The goal is not just to make a game, but to develop stronger execution habits: planning, testing, iteration, and translating ideas into working builds.</p>
+                    </article>
+                </div>
             </section>
         </main>
     </div>
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
-                <img src="icons/youtube.svg" alt="YouTube" />
-            </a>
-            <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
-                <img src="icons/facebook.svg" alt="Facebook" />
-            </a>
-            <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
-                <img src="icons/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
-                <img src="icons/linkedin.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
-                <img src="icons/whatsapp.svg" alt="WhatsApp" />
-            </a>
+    <div data-shared-footer></div>
+    <noscript>
+      <footer class="footer">
+        <div class="footer-trust-links">
+          <a href="contact.html">Contact</a>
+          <a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+          <a href="https://github.com/Janonymous0125" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="files/My_Resume.pdf" download>Resume</a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
-        <p>© 2025 ZhiQi</p>
-    </footer>
+        <div class="social-icons">
+          <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/a.qi_0125" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="icons/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+      </footer>
+    </noscript>
 </body>
 </html>

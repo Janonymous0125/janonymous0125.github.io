@@ -1,18 +1,9 @@
 [
   {
-    "title": "New on Mixcloud!",
+    "title": "DJQI Mixcloud Session",
     "date": "07 May 2025",
-    "content": "<iframe width=\"100%\" height=\"120\" src=\"https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FDJQI%2F%25E5%2586%258D%25E8%25A7%25812k24%25E4%25BD%25A0%25E5%25A5%25BD2k25mixtape-by-dj%25E9%258C%2592%25E7%25A5%2588-%25E4%25BB%2597%25E7%259D%2580-x-%25E6%2588%2591%25E5%258F%25AA%25E8%2583%25BD%25E7%25A6%25BB%25E5%25BC%2580-x-%25E5%258F%258B%25E8%25B0%258A%25E9%2595%25BF%25E5%25AD%2598%2F\" frameborder=\"0\" allow=\"encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;\"></iframe>"
-  },
-  {
-    "title": "New Updates",
-    "date": "08 May 2025",
-    "content": "Page loaded"
-  },
-  {
-    "title": "Page Created!",
-    "date": "08 May 2025",
-    "content": "Testing",
-    "image": "GamePage/gamelogo/gamelogo.png"
+    "content": "<iframe title=\"Mixcloud player: DJQI 再见2k24你好2k25 mixtape\" loading=\"lazy\" width=\"100%\" height=\"120\" src=\"https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FDJQI%2F%25E5%2586%258D%25E8%25A7%25812k24%25E4%25BD%25A0%25E5%25A5%25BD2k25mixtape-by-dj%25E9%258C%2592%25E7%25A5%2588-%25E4%25BB%2597%25E7%259D%2580-x-%25E6%2588%2591%25E5%258F%25AA%25E8%2583%25BD%25E7%25A6%25BB%25E5%25BC%2580-x-%25E5%258F%258B%25E8%25B0%258A%25E9%2595%25BF%25E5%25AD%2598%2F\" frameborder=\"0\" allow=\"encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;\"></iframe>",
+    "externalUrl": "https://www.mixcloud.com/DJQI/%E5%86%8D%E8%A7%812k24%E4%BD%A0%E5%A5%BD2k25mixtape-by-dj%E9%8C%84%E7%A5%88-%E4%BB%97%E7%9D%80-x-%E6%88%91%E5%8F%AA%E8%83%BD%E7%A6%BB%E5%BC%80-x-%E5%8F%8B%E8%B0%8A%E9%95%BF%E5%AD%98/",
+    "externalLabel": "Open on Mixcloud"
   }
 ]

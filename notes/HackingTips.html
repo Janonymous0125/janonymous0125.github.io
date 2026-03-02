@@ -1,338 +1,306 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacking - Tips and Tricks</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ethical Hacking Notes | Jeremiah Wong Zhi Qi</title>
+<meta content="Ethical hacking notes, beginner cybersecurity reminders, and clearer Bandit OverTheWire walkthroughs by Jeremiah Wong Zhi Qi." name="description">
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <canvas id="futuristicCanvas"></canvas>
-    <div class="container">
-        <header>
-            <h1>Hacking Tips and Tricks</h1>
-        </header>
-
-        <div class="content-wrapper">
-            <aside class="sidebar">
-                <h2>Contents</h2>
-                <nav>
-                    <ul>
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#hackingnotes">Ethical Hacking Notes</a></li>
-                        <li>
-                            <details>
-                                <summary>Bandit : OverTheWire</summary>
-                                <ul>
-                                    <li><a href="#OTW-bandit">Bandit : Introduction</a></li>
-                                    <li><a href="#bandit0">Bandit : Level 0</a></li>
-                                    <li><a href="#bandit1">Bandit : Level 1</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <main>
-                <section id="introduction">
-                    <div class="note">
-                        <h2>Introduction to my Tips</h2>
-                        <p><strong>Disclaimer: ALL the skillsets that are provided here are only for Educational purpose ONLY. Any Illegal use of this skillset is a violation of law. Please ONLY use this on authorized system that you owned.</strong></p>
-                        <p>
-                            This notebook is not a course, this notebook are tips that you might not know or just getting started on penetration testing trying to find a guide throughout the learning curve.
-                        </p>
-                        <p>
-                            I would recommend you to get to know Linux; specifically Kali Linux for beginners. There are a lot of tools build in that beginners can go and explore.
-                        </p>
-                    </div>
-                </section>
-                <section id="hackingnotes">
-                    <div class="note">
-                        <h2>Ethical Hacking Notes</h2>
-                        <p><strong>'Hacking'</strong> in general is to find bug in a system and exploit them to get what we want OR to manipulate the system to do what we want which it is not built to do.</p>
-                        <div class="image-grid">
-                            <div class="image-container">
-                                <img src="https://techviral.net/wp-content/uploads/2017/08/Hackers.jpg" alt="Hackers">
-                                <p class="caption">Different types of Hackers</p>
-                            </div>
-                        </div>
-                        <p>
-                            Mainly Hackers are grouped together into three different groups. The most obvious difference between them are their Ethical guidelines.
-                        </p>
-                        <p>
-                            putting these into a table for visualization will be like this:
-                        </p>
-                        <div class="table-container">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Type</th>
-                                        <th>Description</th>
-                                        <th>Working Experience</th>
-                                        <th>WiKi page</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>White-Hat Hackers</td>
-                                        <td>Ethical hackers who legally and with permission find and fix security vulnerabilities to improve system defenses. They are the "good guys" of cybersecurity.</td>
-                                        <td>To proactively improve security for organizations and individuals.</td>
-                                        <td><a href="https://en.wikipedia.org/wiki/White_hat_(computer_security)">Click Here</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gray-Hat Hackers</td>
-                                        <td>
-                                            Operate in a morally ambiguous zone. They hack into systems without permission, but typically with the intent to expose vulnerabilities to the owner, sometimes seeking a fee for their findings.
-                                            Their actions are often illegal, even if their intentions aren't purely malicious.
-                                        </td>
-                                        <td>Often a mix of curiosity, a desire to expose vulnerabilities, and sometimes a hope for financial reward.</td>
-                                        <td><a href="https://en.wikipedia.org/wiki/Grey_hat">Click Here</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Black-Hat Hackers</td>
-                                        <td>Malicious actors who illegally hack into systems for personal gain, to cause harm, or for other nefarious purposes. They are the "bad guys" of the hacking world, engaging in cybercrime, data theft, and disruption.</td>
-                                        <td>To cause harm, steal data, extort money, or achieve personal/political objectives.</td>
-                                        <td><a href="https://en.wikipedia.org/wiki/Black_hat_(computer_security)">Click Here</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="caption">Types of Hackers</p>
-                        </div>
-                    </div>
-                </section>
-                <section id="OTW-bandit">
-                    <div class="note">
-                        <h2>Bandit:OverTheWire</h2>
-                        <p>
-                            Bandit is a CTF base Wargame, Like other CTF you will need to catch the flag and use it as the password for the next level. I highly encurage beginners to start their penertration testing journey here.
-                            <a href="https://overthewire.org/wargames/bandit/">Click Here</a> to enter to the Bandit's page for more details.
-                        </p>
-                        <div class="image-grid">
-                            <div class="image-grid">
-                                <div class="image-container">
-                                    <img src="images/banditInt.jpg" alt="Introduction">
-                                    <p class="caption">Bandit Introduction</p>
-                                </div>
-                            </div>
-                        </div>
-                        <h3 id="bandit0">Level 0 : Initial Login</h3>
-                        <p>
-                            Level 0 is the start of this game and the way you will be able to interact with host machine. From the goals that the creator of Bandit, we know that we have to log into the game via <a href="https://manpages.ubuntu.com/manpages/noble/man1/ssh.1.html">OpenSSH</a>.
-                        </p>
-                        <div class="image-grid">
-                            <div class="image-grid">
-                                <div class="image-container">
-                                    <img src="images/bandit0-goals.jpg" alt="Goals">
-                                    <p class="caption">Bandit0 Goals</p>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            From the above, we can gather the infomation below:
-                        </p>
-                        <ul>
-                            <li>Host: bandit.labs.overthewire.org</li>
-                            <li>Running port: 2220</li>
-                            <li>User: bandit0</li>
-                            <li>Password: bandit0</li>
-                        </ul>
-                        <p>
-                            The credentials of user bandit0 is already given, the host and port of the game is given as well. All we need is to log into the game using the infomation given to start. The format of the ssh command is at the following:
-                        </p>
-                        <div class="code-block">
-                            <pre><code id="ssh-example-1" class="language-bash">ssh -p {port number} {user}@{host}</code></pre>
-                            <button class="copy-button" data-target="ssh-example-1">Copy</button>
-                        </div>
-                        <div>
-                            Combined with the given infomation, we get this:
-                        </div>
-                        <div class="output-block">
-                            <pre><code id="ssh-bandit0" class="language-bash">ssh -p 2220 bandit0@bandit.labs.overthewire.org</code></pre>
-                        </div>
-                        <p>
-                            After entering the command, enter the password; <em><strong>bandit0</strong></em> which is given by the creator in the goal of the level. You have successfully beated level 0! Please read the rules and do not break them...
-                        </p>
-                        <div class="image-grid">
-                            <div class="image-grid">
-                                <div class="image-container">
-                                    <img src="images/bandit1-initiallogin.jpg" alt="Success">
-                                    <p class="caption">Level 0 Completed</p>
-                                </div>
-                            </div>
-                        </div>
-                        <h3 id="bandit1">Level 0 → Level 1 : Reading Files with CLI through OpenSSH</h3>
-                        <div class="image-grid">
-                            <div class="image-grid">
-                                <div class="image-container">
-                                    <img src="images/bandit1-goals.jpg" alt="Goals">
-                                    <p class="caption">Bandit1 Goals</p>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            From the above, we can gather the infomation below:
-                        </p>
-                        <ul>
-                            <li>The password is stored in the readme file.</li>
-                            <li>The readme file is located in the home directory of the current level. (<em>bandit0</em>)</li>
-                            <li>We need to use the password from the readme file to login to the next level.</li>
-                            <li><em>Hint: "bandit1" is the username for the next level.</em></li>
-                        </ul>
-                        <p>
-                            Continuing from last level, we can find our directory using <code>pwd</code> command. <code>pwd</code> stands for Print Working Directory. This helps us to know where we are and where we are workinng on.
-                        </p>
-                        <div class="code-block">
-                            <pre><code><green>bandit0@bandit</green>:<blue><strong>~</strong></blue>$ pwd
+<canvas id="futuristicCanvas"></canvas>
+<div class="container">
+<header>
+<p class="notes-kicker">Cybersecurity learning notes</p>
+<h1>Ethical Hacking Notes and Walkthroughs</h1>
+<p class="notes-header-summary">A practical notes hub for ethical hacking fundamentals, beginner-friendly lab references, and reusable Bandit walkthroughs that are easier to revisit than scattered bookmarks.</p>
+</header>
+<section class="notes-hero-panel">
+<div class="notes-hero-copy">
+<p class="notes-kicker">Featured guide</p>
+<h2>Use this page as a repeatable study reference</h2>
+<p>This page is built for repeat use while learning. It keeps the framing, key commands, and starter OverTheWire progress in one place so you can review concepts quickly before the details fade.</p>
+<nav aria-label="Notes quick links" class="notes-action-group">
+<a class="notes-action-btn primary" href="../CyberSec.html">Cybersecurity Section</a>
+<a class="notes-action-btn secondary" href="../blog.html">General Blog</a>
+<a class="notes-action-btn tertiary" href="../index.html">Homepage</a>
+</nav>
+</div>
+<div class="notes-hero-card">
+<p class="notes-hero-label">Current coverage</p>
+<h3>What this page covers</h3>
+<ul>
+<li>Ethical hacking context and beginner-friendly caution notes</li>
+<li>Bandit introduction plus the first two starter walkthroughs</li>
+<li>Command examples, screenshots, and copy-ready snippets</li>
+</ul>
+</div>
+</section>
+<div class="content-wrapper">
+<aside class="sidebar">
+<h2>Contents</h2>
+<nav>
+<ul>
+<li><a href="#introduction">How to Use These Notes</a></li>
+<li><a href="#hackingnotes">Ethical Hacking Basics</a></li>
+<li>
+<details>
+<summary>Bandit: OverTheWire</summary>
+<ul>
+<li><a href="#OTW-bandit">Bandit Introduction</a></li>
+<li><a href="#bandit0">Bandit Level 0</a></li>
+<li><a href="#bandit1">Bandit Level 1</a></li>
+</ul>
+</details>
+</li>
+</ul>
+</nav>
+</aside>
+<main>
+<section id="introduction">
+<article class="note">
+<h2>How to Use These Notes</h2>
+<p><strong>Disclaimer: These notes are for legal, educational use only. Practice only on systems you own or have explicit permission to test.</strong></p>
+<p>This page is not meant to replace a full course. It is a practical reference for beginners who want a clearer path through early penetration testing concepts, commands, and lab steps.</p>
+<p>A good starting point is Linux familiarity, especially navigating the terminal with confidence. Kali Linux is useful for exploration, but the real goal is understanding the tools rather than just launching them.</p>
+<p>Use the sidebar to jump between concepts, keep notes on passwords or flags locally, and revisit each section after trying the exercise yourself.</p></article>
+</section>
+<section id="hackingnotes">
+<article class="note">
+<h2>Ethical Hacking Basics</h2>
+<p><strong>Hacking</strong> in this context means understanding how systems fail, where trust breaks down, and how attackers might misuse that weakness. In ethical hacking, that knowledge is used to improve security rather than abuse it.</p>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Hackers" src="https://techviral.net/wp-content/uploads/2017/08/Hackers.jpg"/>
+<p class="caption">Common hacker categories</p>
+</div>
+</div>
+<p>People often group hackers into three broad categories. The simplest difference between them is not skill level, but intent, permission, and accountability.</p>
+<p>A quick comparison table makes that difference easier to remember:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Typical Motivation</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>White-Hat Hackers</td>
+<td>Ethical security professionals who work with permission to find, validate, and report vulnerabilities so defenses can be improved.</td>
+<td>Improve security for organizations, products, and users.</td>
+<td><a href="https://en.wikipedia.org/wiki/White_hat_(computer_security)">Click Here</a></td>
+</tr>
+<tr>
+<td>Gray-Hat Hackers</td>
+<td>Operators who may access systems without authorization but claim they are exposing weaknesses rather than causing direct harm. Their actions can still be illegal.</td>
+<td>Curiosity, disclosure, recognition, or occasional financial gain.</td>
+<td><a href="https://en.wikipedia.org/wiki/Grey_hat">Click Here</a></td>
+</tr>
+<tr>
+<td>Black-Hat Hackers</td>
+<td>Malicious actors who break into systems for theft, fraud, disruption, extortion, or other harmful outcomes.</td>
+<td>Personal gain, sabotage, coercion, or criminal objectives.</td>
+<td><a href="https://en.wikipedia.org/wiki/Black_hat_(computer_security)">Click Here</a></td>
+</tr>
+</tbody>
+</table>
+<p class="caption">Types of Hackers</p>
+</div>
+</article>
+</section>
+<section id="OTW-bandit">
+<article class="note">
+<h2>Bandit: OverTheWire</h2>
+<p>Bandit is a beginner-friendly wargame from OverTheWire. Like other capture-the-flag style challenges, you solve each level and use the discovered password to move forward. It is one of the best entry points for learning how Linux commands, files, and basic access workflows fit together. <a href="https://overthewire.org/wargames/bandit/">Visit the Bandit page</a> for the official level list and rules.</p>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Introduction" src="images/banditInt.jpg"/>
+<p class="caption">Bandit Introduction</p>
+</div>
+</div>
+<h3 id="bandit0">Level 0: Initial Login</h3>
+<p>Level 0 is the first login step. The goal is simply to connect to the host with SSH, which is the secure remote-access method used throughout the game.</p>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Goals" src="images/bandit0-goals.jpg"/>
+<p class="caption">Bandit0 Goals</p>
+</div>
+</div>
+<p>From the challenge prompt, we can extract the key connection details below:</p>
+<ul>
+<li>Host: bandit.labs.overthewire.org</li>
+<li>Port: 2220</li>
+<li>Username: bandit0</li>
+<li>Password: bandit0</li>
+</ul>
+<p>Because the host, port, username, and password are already provided, the only task here is to log in correctly and confirm the session works.</p>
+<div class="code-block">
+<pre><code class="language-bash" id="ssh-example-1">ssh -p {port number} {user}@{host}</code></pre>
+<button class="copy-button" data-target="ssh-example-1">Copy</button>
+</div>
+<p>Combined with the given information, the final command becomes:</p>
+<div class="output-block">
+<pre><code class="language-bash" id="ssh-bandit0">ssh -p 2220 bandit0@bandit.labs.overthewire.org</code></pre>
+</div>
+<p>After you run the command, enter the password bandit0 when prompted. Once you reach the shell, you have completed Level 0 and are ready to start reading the system like a real beginner lab environment.</p>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Success" src="images/bandit1-initiallogin.jpg"/>
+<p class="caption">Level 0 Completed</p>
+</div>
+</div>
+<h3 id="bandit1">Level 0 → Level 1: Reading Files Through SSH</h3>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Goals" src="images/bandit1-goals.jpg"/>
+<p class="caption">Bandit1 Goals</p>
+</div>
+</div>
+<p>From the level prompt, we can summarize the task like this:</p>
+<ul>
+<li>The password is stored in a file named readme.</li>
+<li>The readme file is in the home directory for the current level (bandit0).</li>
+<li>That password will be used to log in to the next level.</li>
+<li>Hint: the next username is bandit1.</li>
+</ul>
+<p>Continuing from the previous level, the pwd command confirms where you are. It stands for Print Working Directory and helps you verify which folder you are currently working in.</p>
+<div class="code-block">
+<pre><code><green>bandit0@bandit</green>:<blue><strong>~</strong></blue>$ pwd
 /home/bandit0</code></pre>
-                        </div>
-                        <p>
-                            From the output of the <code>pwd</code> command, we know that we are already in the home directory of the current level. Then by running the <code>ls</code> command, this will list all the files in the current directory.
-                        </p>
-                        <div class="code-block">
-                            <pre><code><green>bandit0@bandit</green>:<blue><strong>~</strong></blue>$ ls
+</div>
+<p>The output shows that you are already in the correct home directory. Running ls then lists the files in that location so you can see what is available to inspect.</p>
+<div class="code-block">
+<pre><code><green>bandit0@bandit</green>:<blue><strong>~</strong></blue>$ ls
 readme</code></pre>
-                        </div>
-                        <p>
-                            Now that we know that the readme file contains the password for the next level. There are two main ways to retrieve the password from the file. Use of CLI Tools like 'cat' OR text editor. For example:
-                        </p>
-                        <div class="table-container">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Command</th>
-                                        <th>Short Description</th>
-                                        <th>Jump to walkthrough</th>
-                                        <th>Link to Manual</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>cat</td>
-                                        <td>Concatenate files and print on the standard output</td>
-                                        <td><a href="#catwt1">cat</a></td>
-                                        <td><a href="https://manpages.ubuntu.com/manpages/noble/man1/cat.1.html">Click Here</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>nano</td>
-                                        <td>Nano's ANOther text editor, inspired by Pico</td>
-                                        <td><a href="#nanowt1">nano</a></td>
-                                        <td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/nano.1.html">Click Here</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>vi</td>
-                                        <td>Screen-oriented (visual) display editor</td>
-                                        <td><a href="#viwt1">vi</a></td>
-                                        <td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/vi.1posix.html">Click Here</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>vim</td>
-                                        <td>Vi IMproved, a programmer's text editor</td>
-                                        <td><a href="#vimwt1">vim</a></td>
-                                        <td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/vim.1.html">Click Here</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="caption">Example Table 1</p>
-                        </div>
-                        <div id="catwt1">
-                            <h3>Walkthrough : cat</h3>
-                            <p><strong>'cat'</strong> is a tool built into linux systems. The command prints the content of the file to the console.</p>
-                            <div class="image-grid">
-                                <div class="image-grid">
-                                    <div class="image-container">
-                                        <img src="images/bandit1-catcompleted.jpg" alt="Goals">
-                                        <p class="caption">Bandit1 Complete</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="nanowt1">
-                            <h3>Walkthrough : nano</h3>
-                            <p><strong>'nano'</strong> is a command line text editor. We can use text editor to read the content of the file too.</p>
-                            <div class="code-block">
-                                <pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ nano readme</code></pre>
-                            </div>
-                            <div class="image-grid">
-                                <div class="image-grid">
-                                    <div class="image-container">
-                                        <img src="images/bandit1-nanocompleted.jpg" alt="Goals">
-                                        <p class="caption">Bandit1 Complete</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="viwt1">
-                            <h3>Walkthrough : vi</h3>
-                            <p><strong>'vi'</strong> is also a command line text editor with much more powerful features.</p>
-                            <div class="code-block">
-                                <pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ vi readme</code></pre>
-                            </div>
-                            <div class="image-grid">
-                                <div class="image-grid">
-                                    <div class="image-container">
-                                        <img src="images/bandit1-vicompleted.jpg" alt="Goals">
-                                        <p class="caption">Bandit1 Complete</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="vimwt1">
-                            <h3>Walkthrough : vim</h3>
-                            <p><strong>'vim'</strong> is a IMproved version of vi. Similar to vi but with even more tools added to the commands</p>
-                            <div class="code-block">
-                                <pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ vim readme</code></pre>
-                            </div>
-                            <div class="image-grid">
-                                <div class="image-grid">
-                                    <div class="image-container">
-                                        <img src="images/bandit1-vimcompleted.jpg" alt="Goals">
-                                        <p class="caption">Bandit1 Complete</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            After we get the password please note it down somewhere you can reach easily... Taking notes will let you know where you left off and you can log back in.... if you forgotten the password or you didnt note it somewhere in your local machine you might
-                            need to start over again.
-                        </p>
-                    </div>
-                </section>
-            </main>
-        </div>
-        <div id="construction-modal" class="modal-overlay">
-            <div class="modal-content">
-                <h2>😀 New Updates 😀</h2>
-                <small>1 July 2025</small>
-                <p><strong>New tips added!!!</strong></p>
-                <p>Bandit:Level 1</p>
-                <p>Hacking Notes</p>
-                <button id="close-modal">OK</button>
-                <a id="home" href="https://janonymous0125.github.io/index.html" class="button">Go Back</a>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="social-icons">
-                <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
-                    <img src="../icons/youtube.svg" alt="YouTube" />
-                </a>
-                <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
-                    <img src="../icons/facebook.svg" alt="Facebook" />
-                </a>
-                <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
-                    <img src="../icons/instagram.svg" alt="Instagram" />
-                </a>
-                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
-                    <img src="../icons/linkedin.svg" alt="LinkedIn" />
-                </a>
-                <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
-                    <img src="../icons/whatsapp.svg" alt="WhatsApp" />
-                </a>
-            </div>
-            <p>© 2025 ZhiQi</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
-    <script src="animation.js"></script>
+</div>
+<p>Once you know the readme file contains the next password, there are a few simple ways to view it. You can print the file directly in the terminal or open it with a text editor. Here are common beginner-friendly options:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Short Description</th>
+<th>Jump to walkthrough</th>
+<th>Link to Manual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cat</td>
+<td>Concatenate files and print on the standard output</td>
+<td><a href="#catwt1">cat</a></td>
+<td><a href="https://manpages.ubuntu.com/manpages/noble/man1/cat.1.html">Click Here</a></td>
+</tr>
+<tr>
+<td>nano</td>
+<td>Nano's ANOther text editor, inspired by Pico</td>
+<td><a href="#nanowt1">nano</a></td>
+<td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/nano.1.html">Click Here</a></td>
+</tr>
+<tr>
+<td>vi</td>
+<td>Screen-oriented (visual) display editor</td>
+<td><a href="#viwt1">vi</a></td>
+<td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/vi.1posix.html">Click Here</a></td>
+</tr>
+<tr>
+<td>vim</td>
+<td>Vi IMproved, a programmer's text editor</td>
+<td><a href="#vimwt1">vim</a></td>
+<td><a href="https://manpages.ubuntu.com/manpages/questing/en/man1/vim.1.html">Click Here</a></td>
+</tr>
+</tbody>
+</table>
+<p class="caption">Common ways to read the readme file</p>
+</div>
+<section id="catwt1">
+<h3>Walkthrough: cat</h3>
+<p><strong>'cat'</strong> prints file contents directly to the terminal, which makes it the fastest beginner-friendly way to read the readme file.</p>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Goals" src="images/bandit1-catcompleted.jpg"/>
+<p class="caption">Bandit1 Complete</p>
+</div>
+</div>
+</section>
+<section id="nanowt1">
+<h3>Walkthrough: nano</h3>
+<p><strong>'nano'</strong> is a simple terminal text editor. It is helpful when you want to open a file in a more guided interface and read it line by line.</p>
+<div class="code-block">
+<pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ nano readme</code></pre>
+</div>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Goals" src="images/bandit1-nanocompleted.jpg"/>
+<p class="caption">Bandit1 Complete</p>
+</div>
+</div>
+</section>
+<section id="viwt1">
+<h3>Walkthrough: vi</h3>
+<p><strong>'vi'</strong> is a classic terminal editor with more power and more shortcuts. It is useful to recognize, even if beginners often prefer nano first.</p>
+<div class="code-block">
+<pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ vi readme</code></pre>
+</div>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Goals" src="images/bandit1-vicompleted.jpg"/>
+<p class="caption">Bandit1 Complete</p>
+</div>
+</div>
+</section>
+<section id="vimwt1">
+<h3>Walkthrough: vim</h3>
+<p><strong>'vim'</strong> is an improved version of vi with additional features. If you already know the basics, it is another valid way to open and read the file.</p>
+<div class="code-block">
+<pre><code><green>bandit0@bandit</green>:<blue>~</blue>$ vim readme</code></pre>
+</div>
+<div class="image-grid">
+<div class="image-container">
+<img alt="Goals" src="images/bandit1-vimcompleted.jpg"/>
+<p class="caption">Bandit1 Complete</p>
+</div>
+</div>
+</section>
+<p>After you retrieve the password, save it somewhere reliable. Keeping structured notes makes it much easier to resume later without repeating earlier levels or losing track of credentials.</p>
+</article>
+</section>
+</main>
+</div>
+<footer class="footer">
+<nav aria-label="Notes footer quick links" class="footer-trust-links">
+<a href="../contact.html">Contact</a>
+<a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+<a href="https://github.com/Janonymous0125" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a download="" href="../files/My_Resume.pdf">Resume</a>
+<a href="https://wa.me/60167729591" rel="noopener noreferrer" target="_blank">WhatsApp</a>
+</nav>
+<div class="social-icons">
+<a aria-label="YouTube" href="https://youtube.com/@zhiqi0125?sub_confirmation=1" rel="noopener noreferrer" target="_blank">
+<img alt="YouTube" src="../icons/youtube.svg"/>
+</a>
+<a aria-label="Facebook" href="https://facebook.com/profile.php?id=61562756152933" rel="noopener noreferrer" target="_blank">
+<img alt="Facebook" src="../icons/facebook.svg"/>
+</a>
+<a aria-label="Instagram" href="https://instagram.com/a.qi_0125" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../icons/instagram.svg"/>
+</a>
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" rel="noopener noreferrer" target="_blank">
+<img alt="LinkedIn" src="../icons/linkedin.svg"/>
+</a>
+<a aria-label="WhatsApp" href="https://wa.me/60167729591" rel="noopener noreferrer" target="_blank">
+<img alt="WhatsApp" src="../icons/whatsapp.svg"/>
+</a>
+</div>
+<p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+</footer>
+</div>
+<script src="script.js"></script>
+<script src="animation.js"></script>
 </body>
 </html>

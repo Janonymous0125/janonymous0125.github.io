@@ -21,7 +21,7 @@ body {
     --code-border: #44475a;
     --output-bg: #383a59;
     --output-border: #50fa7b; /* A green for output highlighting */
-    --card: #333333; /* Used for footer and modal-content background */
+    --card: #333333; /* Used for footer and card-like surfaces */
     --sci-fi-glow: rgba(0, 224, 255, 0.4); /* Sci-fi glow effect */
     --sci-fi-border: rgba(0, 224, 255, 0.2); /* Sci-fi border effect */
 }
@@ -227,6 +227,30 @@ video, iframe {
             filter: brightness(1.1);
         }
 
+
+.footer-trust-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin: 0 0 1rem;
+}
+
+.footer-trust-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-trust-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    margin: 0;
+    line-height: 1.7;
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .content-wrapper {
@@ -285,82 +309,6 @@ video, iframe {
         padding: 15px;
     }
 }
-
-/* --- Modal Styles --- */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(3px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-
-.modal-content {
-    background-color: var(--card);
-    color: var(--text-color);
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    max-width: 400px;
-    box-shadow: 0 0 20px var(--sci-fi-glow);
-    border: 1px solid var(--sci-fi-border);
-}
-
-    .modal-content h2 {
-        margin-top: 0;
-        color: var(--accent-color);
-        line-height: 1.2; /* Adjust line-height for closer heading text */
-    }
-
-        /* Style for the date inside the modal heading */
-        .modal-content h2 small {
-            display: block;
-            font-size: 0.7em;
-            color: #cccccc;
-            margin-top: 2px; /* Adjusted to bring it closer */
-        }
-
-#close-modal {
-    margin-top: 1.5rem;
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    #close-modal:hover {
-        background-color: #6fb2d3; /* Slightly darker/different shade on hover */
-    }
-
-/* Style for the 'Go back homepage' button */
-.modal-content .button {
-    display: inline-block;
-    margin-top: 1rem; /* Space between buttons/content */
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    background-color: var(--output-border); /* Using a green accent color for this button */
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    .modal-content .button:hover {
-        background-color: #44cc6a; /* Darker green on hover */
-    }
-
 
 /* --- Code and Output Block Styles --- */
 .code-block {
@@ -508,4 +456,141 @@ video, iframe {
 
 header, .sidebar, main {
     background-color: rgba(34, 34, 34, 0.85); /* Example: Add transparency to content backgrounds */
+}
+
+.notes-kicker {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--hover-color);
+}
+
+.notes-header-summary {
+    margin: 0.9rem auto 0;
+    max-width: 760px;
+    color: var(--text-color);
+}
+
+.notes-hero-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.75fr) minmax(260px, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(34, 34, 34, 0.78);
+}
+
+.notes-hero-copy,
+.notes-hero-card {
+    background: rgba(51, 51, 51, 0.45);
+    border: 1px solid var(--sci-fi-border);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.notes-hero-panel h2,
+.notes-hero-card h3 {
+    margin-top: 0;
+}
+
+.notes-hero-panel h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.notes-hero-panel p,
+.notes-hero-card li {
+    color: var(--text-color);
+}
+
+.notes-hero-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--hover-color);
+}
+
+.notes-action-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.notes-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--sci-fi-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.notes-action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(0, 224, 255, 0.12);
+}
+
+.notes-action-btn.primary {
+    background: var(--accent-color);
+    color: #10222b;
+}
+
+.notes-action-btn.secondary,
+.notes-action-btn.tertiary {
+    background: rgba(137, 207, 240, 0.08);
+    color: var(--accent-color);
+}
+
+.notes-hero-card ul {
+    padding-left: 1.1rem;
+    margin: 0;
+}
+
+.sidebar {
+    position: sticky;
+    top: 18px;
+    align-self: flex-start;
+    max-height: calc(100vh - 40px);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+    .notes-hero-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .notes-hero-panel {
+        padding: 15px;
+    }
+
+    .notes-action-group {
+        flex-direction: column;
+    }
+
+    .notes-action-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .notes-hero-panel h2 {
+        font-size: 1.5rem;
+    }
 }

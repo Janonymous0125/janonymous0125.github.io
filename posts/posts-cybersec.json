@@ -1,31 +1,14 @@
 [
   {
-    "title": "New Hacking Tips",
+    "title": "OverTheWire Bandit Walkthrough Notes",
     "date": "29 Jun 2025",
-    "content": "Take a look at my walkthrough for a Wargame Challenge; Bandit by OverTheWire.",
+    "content": "A practical writeup focused on Bandit by OverTheWire, documenting beginner-friendly Linux and command line steps for security learning.",
     "image": "notes/images/banditInt.jpg"
   },
   {
-    "title": "Why Nmap?",
+    "title": "Why Nmap Matters",
     "date": "07 May 2025",
-    "content": "Nmap is a networking tools for scaning network devices, it has build in with a huge library of switches and scripts scanings for a variety of situations. <a href='https://nmap.org/download'>Click here</a> to go to the official website of Nmap",
+    "content": "A short note on why Nmap is one of the most useful tools for network discovery and security testing. <a href='https://nmap.org/download' target='_blank' rel='noopener noreferrer'>Visit the official site</a> for downloads and documentation.",
     "image": "images/nmap-logo.jpg"
-  },
-  {
-    "title": "This is a Simple Demo of sharing files",
-    "date": "07 May 2025",
-    "content": "Check out this CLI tool I made using Python's socket library.",
-    "file": "files/testing.zip"
-  },
-  {
-    "title": "Video upload test",
-    "date": "07 May 2025",
-    "content": "This post explains nothing and its just a test.",
-    "video": "videos/testing.mp4"
-  },
-  {
-    "title": "Testing Colums and Rows",
-    "date": "07 May 2025",
-    "content": "Test for new row"
   }
 ]

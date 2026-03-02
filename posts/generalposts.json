@@ -1,13 +1,8 @@
 [
   {
-    "title": "Help I Provided for Jeremiah Education",
+    "title": "Windows Setup Automation Script",
     "date": "12 Jun 2025",
-    "content": "This is a Powershell script that I create to automate the setup for the organization's computer.",
+    "content": "A PowerShell script built to help automate setup work for Jeremiah Education computers and make routine configuration steps easier to repeat.",
     "file": "scripts/SuperAdmin.ps1"
-  },
-  {
-    "title": "Testings Post",
-    "date": "07 May 2025",
-    "content": "This is a post for testing. Please Subscribe to my <a href='https://youtube.com/@zhiqi0125?sub_confirmation=1'>YouTube Channel</a>"
   }
 ]

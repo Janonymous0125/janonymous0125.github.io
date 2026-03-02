@@ -1,78 +1,168 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Production</title>
+    <meta name="description" content="Music production portfolio featuring DJ work, remixes, original ideas, and creative audio projects from Jeremiah Wong Zhi Qi." />
+    <link rel="canonical" href="https://janonymous0125.github.io/MusicP.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Music Production Portfolio | Jeremiah Wong Zhi Qi" />
+    <meta property="og:description" content="Music production portfolio featuring DJ work, remixes, original ideas, and creative audio projects from Jeremiah Wong Zhi Qi." />
+    <meta property="og:url" content="https://janonymous0125.github.io/MusicP.html" />
+    <meta property="og:image" content="https://janonymous0125.github.io/images/MusicP.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Music Production Portfolio | Jeremiah Wong Zhi Qi" />
+    <meta name="twitter:description" content="Music production portfolio featuring DJ work, remixes, original ideas, and creative audio projects from Jeremiah Wong Zhi Qi." />
+    <meta name="twitter:image" content="https://janonymous0125.github.io/images/MusicP.jpg" />
+    <title>Music Production Portfolio | Jeremiah Wong Zhi Qi</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="shared-chrome-config.js"></script>
+    <script defer src="shared-header.js"></script>
     <script defer src="script.js"></script>
-    <script defer src="MPload-posts.js"></script>
-
+    <script defer src="load-posts.js"></script>
+    <script defer src="shared-footer.js"></script>
 </head>
 <body>
-    <header>
+    <div data-shared-header data-page-key="music" data-page-title="Music Production"></div>
+    <noscript>
+      <header>
         <h1>Music Production</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown">
-                <button class="dropdown-toggle">Blog ▾</button>
-                <div class="dropdown-content">
-                    <a href="blog.html">General Blog</a>
-                    <a href="CyberSec.html">Cyber Security</a>
-                    <a href="GameDev.html">Game Development</a>
-                    <a href="MusicP.html">Music Production</a>
-                    <a href="VideoEditing.html">Video Editing</a>
-                </div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="dropdown open-current">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">Blog ▾</button>
+            <div class="dropdown-content">
+              <a href="blog.html">General Blog</a>
+              <a href="CyberSec.html">Cyber Security</a>
+              <a href="GameDev.html">Game Development</a>
+              <a href="MusicP.html" aria-current="page">Music Production</a>
+              <a href="VideoEditing.html">Video Editing</a>
             </div>
-            <a href="contact.html">Contact</a>
-            <button id="darkModeToggle">🌓</button>
+          </div>
+          <a href="contact.html">Contact</a>
+          <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" disabled>🌓</button>
         </nav>
-    </header>
+      </header>
+    </noscript>
 
     <div class="page-content transition">
-        <main>
-            <section class="topic-header">
-                <h1>My Music Production Story</h1>
-                <p>
-                    Music kind of followed me whole of my life. I started to learn piano when I was 7 years-old, drum when I was 9 years-old, violin when I was 10 years-old, 
-                    guitar and bass when I was 13 years-old, and started DeeJaying when I was 16 years-old. Till now, Im still serving in my church as a drummer and a singer. 
-                    I rarely but would go to some events to DJ if invited by the organizers.
-                </p>
-                <p>
-                    Music production is one of ways I put my imagination and creativity into. I mainly uses FL Studio to compose or remix my musics and songs. For DeeJaying and mixing, 
-                    Im using an old pioneer DDJ-400 and Rekordbox. 
-                </p>
+        <main class="consistency-shell">
+            <section class="home-hero consistency-hero">
+                <div class="home-hero-copy">
+                    <p class="hero-kicker">Creative audio work</p>
+                    <h2>Using music production and DJ work as another way to build, refine, and share creative ideas.</h2>
+                    <p class="hero-summary">Music is one of the longest-running creative parts of my background. This section brings together DJ mixes, music production experiments, and audio-focused work that reflects the same hands-on mindset seen across the rest of the portfolio.</p>
+                    <div class="hero-cta-group">
+                        <a href="#music-posts" class="hero-btn hero-btn-primary">View Music Logs</a>
+                        <a href="https://www.mixcloud.com/DJQI/" class="hero-btn hero-btn-secondary" target="_blank" rel="noopener noreferrer">Visit Mixcloud</a>
+                    </div>
+                </div>
+
+                <div class="home-hero-visual hero-identity-card">
+                    <img src="images/MusicP.jpg" alt="Music production setup and creative audio work" class="hero-profile-img" />
+                    <div class="hero-identity-meta">
+                        <p class="hero-identity-label">Creative lane</p>
+                        <h3>Performance, production, and experimentation</h3>
+                        <ul>
+                            <li>DJ mixes and live-set practice</li>
+                            <li>Production and remix work in FL Studio</li>
+                            <li>Long-term creative development through music</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
-            <section class="topic-header">
-                <h1>Music Blogs</h1>
-                <p>
-                    Most of my mix are on <a href="https://www.mixcloud.com/DJQI/">Mixcloud</a>. Check out more on my mixcloud page.
-                </p>
-                <p class="topic-body" id="post-list">Loading posts...</p>
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Background</p>
+                    <h2>How music fits into this portfolio</h2>
+                    <p>Music production gives me a different kind of creative workspace. It combines rhythm, structure, technical tools, and experimentation in a way that complements my work in software, game development, and other project-based learning.</p>
+                </div>
+                <div class="consistency-feature-grid">
+                    <article class="strength-card">
+                        <h3>DJ Practice</h3>
+                        <p>Building mixes and transitions through active listening, timing, and live-set preparation.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Production Workflow</h3>
+                        <p>Using digital audio tools to sketch ideas, remix tracks, and improve arrangement and sound design habits.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Creative Discipline</h3>
+                        <p>Applying consistency, iteration, and attention to detail across both technical and artistic work.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Tools and setup</p>
+                    <h2>Main tools I use for music work</h2>
+                </div>
+                <div class="consistency-two-column">
+                    <article class="proof-card">
+                        <h3>Production</h3>
+                        <p>FL Studio is my main environment for composing, experimenting with ideas, and building remixes or original arrangements.</p>
+                    </article>
+                    <article class="proof-card">
+                        <h3>DJ Workflow</h3>
+                        <p>I use a Pioneer DDJ-400 with Rekordbox for mixing practice and event-ready sets when opportunities come up.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel" id="music-posts">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Latest music posts</p>
+                    <h2>Mixes, embeds, and music-related updates</h2>
+                    <p>Most published mixes are shared through Mixcloud, while this page keeps the portfolio-side updates in one place.</p>
+                </div>
+                <div class="topic-body consistency-post-list" id="post-list" data-posts-json="posts/posts-music.json" data-download-label="Download File" data-empty-text="Music updates will appear here as new mixes and posts are added." data-error-text="Unable to load music posts right now.">Loading posts...</div>
+            </section>
+
+            <section class="homepage-panel consistency-panel consistency-cta-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Contact</p>
+                    <h2>Interested in the creative side of my work?</h2>
+                    <p>You can explore the rest of the portfolio or reach out directly if you want to connect about creative projects, collaboration, or technical work that overlaps with media and audio.</p>
+                </div>
+                <div class="hero-cta-group contact-cta-buttons">
+                    <a href="contact.html" class="hero-btn hero-btn-primary">Contact Me</a>
+                    <a href="VideoEditing.html" class="hero-btn hero-btn-secondary">View Visual Media</a>
+                </div>
             </section>
         </main>
     </div>
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
-                <img src="icons/youtube.svg" alt="YouTube" />
-            </a>
-            <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
-                <img src="icons/facebook.svg" alt="Facebook" />
-            </a>
-            <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
-                <img src="icons/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
-                <img src="icons/linkedin.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
-                <img src="icons/whatsapp.svg" alt="WhatsApp" />
-            </a>
+    <div data-shared-footer></div>
+    <noscript>
+      <footer class="footer">
+        <div class="footer-trust-links">
+          <a href="contact.html">Contact</a>
+          <a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+          <a href="https://github.com/Janonymous0125" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="files/My_Resume.pdf" download>Resume</a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
-        <p>© 2025 ZhiQi</p>
-    </footer>
+        <div class="social-icons">
+          <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/a.qi_0125" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="icons/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+      </footer>
+    </noscript>
 </body>
 </html>

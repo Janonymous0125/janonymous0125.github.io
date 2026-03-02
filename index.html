@@ -3,260 +3,397 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Personal Webpage</title>
+    <meta name="description" content="Portfolio of Jeremiah Wong Zhi Qi, a cybersecurity-focused builder creating practical security notes, technical projects, automation work, and creative technology experiments." />
+    <link rel="canonical" href="https://janonymous0125.github.io/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jeremiah Wong Zhi Qi | Cybersecurity-Focused Builder" />
+    <meta property="og:description" content="Explore cybersecurity notes, automation work, creative tech projects, certifications, and practical portfolio highlights by Jeremiah Wong Zhi Qi." />
+    <meta property="og:url" content="https://janonymous0125.github.io/index.html" />
+    <meta property="og:image" content="https://janonymous0125.github.io/images/profile.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jeremiah Wong Zhi Qi | Cybersecurity-Focused Builder" />
+    <meta name="twitter:description" content="Explore cybersecurity notes, automation work, creative tech projects, certifications, and practical portfolio highlights by Jeremiah Wong Zhi Qi." />
+    <meta name="twitter:image" content="https://janonymous0125.github.io/images/profile.jpg" />
+    <title>Jeremiah Wong Zhi Qi | Cybersecurity-Focused Builder</title>
     <link rel="icon" href="icons/favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="shared-chrome-config.js"></script>
+    <script defer src="shared-header.js"></script>
     <script defer src="script.js"></script>
+    <script defer src="shared-footer.js"></script>
 </head>
 <body>
-    <audio id="backgroundMusic" src="music/background.mp3" autoplay loop></audio>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
+    <div data-shared-header data-page-key="home" data-page-title="Jeremiah Wong Zhi Qi"></div>
+    <noscript>
+      <header>
+        <h1>Jeremiah Wong Zhi Qi</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown">
-                <button class="dropdown-toggle">Blog ▾</button>
-                <div class="dropdown-content">
-                    <a href="blog.html">General Blog</a>
-                    <a href="CyberSec.html">Cyber Security</a>
-                    <a href="GameDev.html">Game Development</a>
-                    <a href="MusicP.html">Music Production</a>
-                    <a href="VideoEditing.html">Video Editing</a>
-                </div>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <div class="dropdown">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Blog ▾</button>
+            <div class="dropdown-content">
+              <a href="blog.html">General Blog</a>
+              <a href="CyberSec.html">Cyber Security</a>
+              <a href="GameDev.html">Game Development</a>
+              <a href="MusicP.html">Music Production</a>
+              <a href="VideoEditing.html">Video Editing</a>
             </div>
-            <a href="contact.html">Contact</a>
-            <button id="darkModeToggle">🌓</button>
+          </div>
+          <a href="contact.html">Contact</a>
+          <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" disabled>🌓</button>
         </nav>
-    </header>
+      </header>
+    </noscript>
+
     <div class="page-content transition">
-        <main>
-            <section class="creative-work">
-                <h2>Categories of my work</h2>
-                <div class="category-grid">
-                    <a href="GameDev.html" class="category-card both-borders">
-                        <img src="images/unreal_logo.png" alt="Games" />
-                        <span>Game Developing</span>
+        <main class="homepage-shell">
+            <section class="home-hero home-hero-rewrite">
+                <div class="home-hero-copy">
+                    <p class="hero-kicker">Cybersecurity-focused builder and creative technologist</p>
+                    <p class="hero-name">Jeremiah Wong Zhi Qi</p>
+                    <h2>Building practical security work, technical projects, and creative systems that show how I solve problems.</h2>
+                    <p class="hero-summary">I build across cybersecurity, automation, software, and creative development with a hands-on, project-based learning style. Start with the featured work below to quickly review my labs, scripts, notes, and prototype builds in one place.</p>
+                    <div class="hero-cta-group">
+                        <a href="#featured-projects" class="hero-btn hero-btn-primary">View Projects</a>
+                        <a href="files/My_Resume.pdf" class="hero-btn hero-btn-secondary" download>Download Resume</a>
+                    </div>
+                    <div class="hero-highlights">
+                        <span class="hero-chip">Security notes and labs</span>
+                        <span class="hero-chip">Automation and scripting work</span>
+                        <span class="hero-chip">Creative technology projects</span>
+                    </div>
+                    <div class="hero-support-links">
+                        <a href="CyberSec.html">Explore cybersecurity work</a>
+                        <a href="contact.html">Contact me</a>
+                    </div>
+                </div>
+
+                <div class="home-hero-visual hero-identity-card">
+                    <img src="images/profile.jpg" alt="Jeremiah Wong Zhi Qi profile photo" class="hero-profile-img" />
+                    <div class="hero-identity-meta">
+                        <p class="hero-identity-label">Portfolio focus</p>
+                        <h3>Clear work tracks, practical documentation, and curated proof</h3>
+                        <ul>
+                            <li>Featured projects selected for the fastest portfolio review</li>
+                            <li>Writeups and learning logs that show process, not just outcomes</li>
+                            <li>Certifications and supporting material linked from the homepage</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="homepage-panel proof-strip-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Quick proof</p>
+                    <h2>Review the clearest proof paths first</h2>
+                    <p>If you want the fastest overview, start with one of these four routes. Each one leads to a focused page that explains the work before sending you deeper into the portfolio.</p>
+                </div>
+                <div class="proof-strip-grid">
+                    <article class="proof-card">
+                        <p class="proof-card-label">Security fundamentals</p>
+                        <h3>Security Learning and Labs</h3>
+                        <p>Review guided security practice, Linux and SSH fundamentals, and documented lab work that shows how I build practical skills step by step.</p>
+                        <a href="bandit-case-study.html" class="text-link-button proof-card-link">Start with the Bandit case study →</a>
+                    </article>
+                    <article class="proof-card">
+                        <p class="proof-card-label">Automation work</p>
+                        <h3>Technical Projects</h3>
+                        <p>See scripting and workflow-improvement work built to make repeatable setup tasks faster, clearer, and easier to reuse.</p>
+                        <a href="automation-case-study.html" class="text-link-button proof-card-link">Review the automation case study →</a>
+                    </article>
+                    <article class="proof-card">
+                        <p class="proof-card-label">Creative systems</p>
+                        <h3>Creative Tech Builds</h3>
+                        <p>Explore a structured game prototype that shows how I apply technical thinking to interactive design, systems planning, and project execution.</p>
+                        <a href="nightfall-kingdoms-case-study.html" class="text-link-button proof-card-link">Open the Nightfall Kingdoms case study →</a>
+                    </article>
+                    <article class="proof-card">
+                        <p class="proof-card-label">Structured learning proof</p>
+                        <h3>Certifications and Supporting Proof</h3>
+                        <p>Check the curated certifications page for formal learning proof and the context behind how those certificates support the wider portfolio.</p>
+                        <a href="certifications-proof.html" class="text-link-button proof-card-link">View certifications proof →</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel" id="featured-projects">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Selected work</p>
+                    <h2>Featured projects</h2>
+                    <p>These are the strongest starting points if you want to understand how I work across security, scripting, and creative technology.</p>
+                </div>
+                <div class="homepage-project-grid">
+                    <article class="homepage-project-card">
+                        <a href="bandit-case-study.html" class="homepage-project-media" aria-label="View the Bandit case study">
+                            <img src="notes/images/banditInt.jpg" alt="OverTheWire Bandit notes preview" loading="lazy" decoding="async" />
+                            <span class="homepage-project-media-scrim"></span>
+                            <span class="homepage-project-media-badge">Cybersecurity</span>
+                            <span class="homepage-project-media-caption">Labs · Linux · SSH fundamentals</span>
+                        </a>
+                        <div class="homepage-project-body">
+                            <p class="homepage-project-tag">Guided security walkthrough</p>
+                            <h3>Bandit Walkthrough and Security Notes</h3>
+                            <p>Documented a step-by-step Bandit walkthrough to strengthen Linux, SSH, and command line fundamentals while keeping the learning process reviewable.</p>
+                            <ul class="homepage-project-meta">
+                                <li><strong>Tools:</strong> Linux, SSH, CLI, OverTheWire</li>
+                                <li><strong>Purpose:</strong> Build practical security foundations through guided lab work.</li>
+                            </ul>
+                            <a href="bandit-case-study.html" class="project-inline-link">View case study →</a>
+                        </div>
+                    </article>
+
+                    <article class="homepage-project-card homepage-project-card-featured">
+                        <a href="automation-case-study.html" class="homepage-project-media" aria-label="View the Windows setup automation case study">
+                            <img src="images/automation-thumbnail.png" alt="Custom Windows setup automation thumbnail showing PowerShell workflow and admin setup tasks" loading="lazy" decoding="async" />
+                            <span class="homepage-project-media-scrim"></span>
+                            <span class="homepage-project-media-badge">Automation</span>
+                            <span class="homepage-project-media-caption">PowerShell · Setup workflow · Admin tasks</span>
+                        </a>
+                        <div class="homepage-project-body">
+                            <p class="homepage-project-tag">Reusable system setup flow</p>
+                            <h3>Windows Setup Automation Script</h3>
+                            <p>Built a PowerShell setup script to make repeatable computer setup work faster and more consistent in an education environment.</p>
+                            <ul class="homepage-project-meta">
+                                <li><strong>Tools:</strong> PowerShell, Windows administration</li>
+                                <li><strong>Outcome:</strong> Reduce repetitive configuration work with a reusable setup workflow.</li>
+                            </ul>
+                            <a href="automation-case-study.html" class="project-inline-link">View case study →</a>
+                        </div>
+                    </article>
+
+                    <article class="homepage-project-card">
+                        <a href="nightfall-kingdoms-case-study.html" class="homepage-project-media" aria-label="View the Nightfall Kingdoms case study">
+                            <img src="images/gamelogo.png" alt="Nightfall Kingdoms game concept preview" loading="lazy" decoding="async" />
+                            <span class="homepage-project-media-scrim"></span>
+                            <span class="homepage-project-media-badge">Creative tech</span>
+                            <span class="homepage-project-media-caption">Unreal Engine · Systems design · Worldbuilding</span>
+                        </a>
+                        <div class="homepage-project-body">
+                            <p class="homepage-project-tag">Interactive prototype build</p>
+                            <h3>Nightfall Kingdoms Prototype</h3>
+                            <p>Developed an Unreal Engine prototype to explore worldbuilding, systems design, and interactive concept development through a structured game project.</p>
+                            <ul class="homepage-project-meta">
+                                <li><strong>Tools:</strong> Unreal Engine, game systems, worldbuilding</li>
+                                <li><strong>Purpose:</strong> Explore interactive design through project-based creative development.</li>
+                            </ul>
+                            <a href="nightfall-kingdoms-case-study.html" class="project-inline-link">View case study →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="featured-projects-footer">
+                    <a href="blog.html" class="text-link-button section-inline-link">Browse more notes and project updates →</a>
+                </div>
+            </section>
+
+            <section class="homepage-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Core strengths</p>
+                    <h2>How I turn learning into usable work</h2>
+                    <p>My strongest habits are practical execution, structured learning, and documenting work clearly enough that it can be reviewed, repeated, and improved.</p>
+                </div>
+                <div class="strengths-grid">
+                    <article class="strength-card">
+                        <p class="strength-card-label">Hands-on foundations</p>
+                        <h3>Cybersecurity Fundamentals</h3>
+                        <p>Build practical security foundations through labs, Linux workflows, walkthroughs, and course-backed study that turns theory into repeatable practice.</p>
+                    </article>
+                    <article class="strength-card">
+                        <p class="strength-card-label">Structured execution</p>
+                        <h3>Technical Problem Solving</h3>
+                        <p>Break larger goals into smaller working parts so projects move forward with clearer priorities, cleaner steps, and easier review.</p>
+                    </article>
+                    <article class="strength-card">
+                        <p class="strength-card-label">Workflow improvement</p>
+                        <h3>Scripting and Automation</h3>
+                        <p>Use scripts and lightweight tooling to reduce repetitive setup work, improve consistency, and make useful workflows easier to reuse.</p>
+                    </article>
+                    <article class="strength-card">
+                        <p class="strength-card-label">Interactive systems</p>
+                        <h3>Creative Development</h3>
+                        <p>Apply technical thinking to game development and experimental builds that strengthen systems planning, iteration, and creative execution.</p>
+                    </article>
+                    <article class="strength-card">
+                        <p class="strength-card-label">Clear knowledge capture</p>
+                        <h3>Documentation and Learning</h3>
+                        <p>Capture notes, setup steps, and lessons learned so progress stays understandable, shareable, and easier to build on later.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel cyber-focus-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Cybersecurity direction</p>
+                    <h2>Building toward a stronger cybersecurity portfolio</h2>
+                </div>
+                <div class="cyber-focus-layout">
+                    <p>Cybersecurity is the core direction of my portfolio. I use hands-on labs, technical notes, certifications, and practical projects to strengthen my understanding of systems, security concepts, and problem-solving workflows.</p>
+                    <div class="cyber-focus-note">
+                        <strong>Current emphasis:</strong> Linux fundamentals, walkthrough documentation, tool familiarity, and practical repetition through lab-based learning.
+                    </div>
+                    <div class="cyber-focus-points">
+                        <span>Labs and guided practice</span>
+                        <span>Writeups and documented learning</span>
+                        <span>Course-based certification progress</span>
+                        <span>Technical experimentation across tools and systems</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="homepage-panel about-preview-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">About</p>
+                    <h2>The builder behind the work</h2>
+                </div>
+                <div class="about-preview-layout">
+                    <p>I am a cybersecurity-focused builder who learns by turning curiosity into practical, documented work. Across security labs, scripting projects, web experiments, and creative builds, I try to make each project useful enough to review, repeat, and improve.</p>
+                    <p>The proof on this homepage shows the clearest entry points first. The About page explains how I work, what I am building toward, and why this portfolio brings security, automation, and creative technology together.</p>
+                    <p class="about-preview-bridge">Go there next if you want the context behind the projects, the working style behind the notes, and the direction behind the portfolio.</p>
+                    <a href="about.html" class="text-link-button">See the full story behind the portfolio →</a>
+                </div>
+            </section>
+
+            <section class="homepage-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Notes and writeups</p>
+                    <h2>Learning logs and technical notes</h2>
+                    <p>This section shows how I document my learning, capture useful references, and keep project progress visible.</p>
+                </div>
+                <div class="notes-preview-grid">
+                    <a href="notes-learning-hub.html#security-notes" class="notes-preview-card">
+                        <h3>Security Notes</h3>
+                        <p>Cybersecurity-focused notes, blog entries, tools, and learning progress.</p>
+                        <span>Open section →</span>
                     </a>
-                    <a href="MusicP.html" class="category-card both-borders">
-                        <img src="images/MusicP.jpg" alt="Music" />
-                        <span>Music Production</span>
+                    <a href="notes-learning-hub.html#lab-writeups" class="notes-preview-card">
+                        <h3>Lab Writeups</h3>
+                        <p>Bandit walkthrough notes and practical command line learning material.</p>
+                        <span>Read writeup →</span>
                     </a>
-                    <a href="CyberSec.html" class="category-card both-borders">
-                        <img src="images/hacks.png" alt="Hacks" />
-                        <span>Cybersecurity</span>
+                    <a href="notes-learning-hub.html#setup-guides" class="notes-preview-card">
+                        <h3>Setup Guides</h3>
+                        <p>General technical notes, including workflow support and setup-oriented scripting work.</p>
+                        <span>View blog →</span>
                     </a>
-                    <a href="VideoEditing.html" class="category-card both-borders">
-                        <img src="images/photo-icon.jpg" alt="Photo & Video" />
-                        <span>Photography & Videography</span>
+                    <a href="notes-learning-hub.html#project-logs" class="notes-preview-card">
+                        <h3>Project Logs</h3>
+                        <p>Development updates and experiments tied to ongoing creative technology work.</p>
+                        <span>See updates →</span>
                     </a>
                 </div>
             </section>
-            <section class="resume-section">
-                <h2>My Resume</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Secondary High School</h3>
-                            <h4>100 Lambs</h4>
-                            <p class="timeline-date">Jan 2009 - Dec 2017</p>
-                            <ul>
-                                <li>IGCSE Graduate(O Levels)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Secondary SPM(O levels)</h3>
-                            <h4>JeremaiahEducation</h4>
-                            <p class="timeline-date">Jan 2019 - Dec 2019</p>
-                            <ul>
-                                <li>SPM Graduate(O Levels)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Teacher</h3>
-                            <h4>JeremiahEducation</h4>
-                            <p class="timeline-date">Jan 2020 - Feb 2021</p>
-                            <ul>
-                                <li>Math Teacher of Primary and Secondary School</li>
-                                <li>Science Teacher of Primary and Secondary School</li>
-                                <li>English Teacher Of Secondary School</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Sales Agent / Administration</h3>
-                            <h4>CTC Travel</h4>
-                            <p class="timeline-date">Mar 2021 - Dec 2022</p>
-                            <ul>
-                                <li>Product Sales</li>
-                                <li>Web Administration</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Electrical Engineer Technician</h3>
-                            <h4>Cosmic Art</h4>
-                            <p class="timeline-date">Jan 2023 - Mar 2023</p>
-                            <ul>
-                                <li>Machine Technician</li>
-                                <li>CAD Designer</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Business Partner</h3>
-                            <h4>Mucho Moreo Cafe</h4>
-                            <p class="timeline-date">April 2023 - Oct 2023</p>
-                            <ul>
-                                <li>Restaurant Manager</li>
-                                <li>Business Adminitration</li>
-                                <li>Accountant</li>
-                                <li>Cashier</li>
-                                <li>Waiter</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Teacher</h3>
-                            <h4>JeremiahEducation</h4>
-                            <p class="timeline-date">Nov 2023 - Jun 2024</p>
-                            <ul>
-                                <li>Math Teacher of Primary School</li>
-                                <li>Science Teacher of Primary School</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Certification Of Cybersecurity</h3>
-                            <h4>EC Council</h4>
-                            <p class="timeline-date">Mar 2023 - Mar 2025</p>
-                            <ul>
-                                <li>Graduated with honors.</li>
-                                <li>BlackHat C++: C++ for Penetration Testing</li>
-                                <li>DarkWeb, Anonymity and Cyptocurrency</li>
-                                <li>Penetration and PrivEsc</li>
-                                <li>DevSecOps</li>
-                                <li>Linux Course</li>
-                                <li>Ethical Hacking</li>
-                                <li>NetCat Pentest</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Bug Bounty Hunter</h3>
-                            <h4>Self-Employed</h4>
-                            <p class="timeline-date">Sept 2024 - Present</p>
-                            <ul>
-                                <li>Penetration Tester</li>
-                                <li>Vulnerbility Researcher</li>
-                                <li>infrastructure administration</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>DeeJay</h3>
-                            <h4>Self-Employed</h4>
-                            <p class="timeline-date">July 2018 - Present</p>
-                            <ul>
-                                <li>Music Remixing</li>
-                                <li>Music Production</li>
-                                <li>Event DeeJay</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Game Developer</h3>
-                            <h4>Self-Employed</h4>
-                            <p class="timeline-date">Apirl 2025 - Present</p>
-                            <ul>
-                                <li>3D Designer</li>
-                                <li>Animator</li>
-                                <li>System Programmer</li>
-                                <li>VFX Artist</li>
-                                <li>Sound Designer</li>
-                                <li>Music Composer</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="skills-hobbies">
-                    <h3>My Skills & Hobbies</h3>
-                    <h4>Skills</h4>
-                    <div class="skills-grid">
-                        <span class="skill-item">Cybersecurity Analysis</span>
-                        <span class="skill-item">Penetration Testing</span>
-                        <span class="skill-item">C++ Programming</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">HTML/CSS</span>
-                        <span class="skill-item">Unreal Engine</span>
-                        <span class="skill-item">3D Modeling</span>
-                        <span class="skill-item">Animation</span>
-                        <span class="skill-item">Music Production</span>
-                        <span class="skill-item">DJing</span>
-                        <span class="skill-item">Video Editing</span>
-                        <span class="skill-item">Photography</span>
-                        <span class="skill-item">Web Administration</span>
-                        <span class="skill-item">Customer Service</span>
-                        <span class="skill-item">Android Application Development</span>
-                    </div>
-                    <h4>Hobbies</h4>
-                    <div class="hobbies-grid">
-                        <span class="hobby-item">Gaming</span>
-                        <span class="hobby-item">Composing Music</span>
-                        <span class="hobby-item">Bug Bounties</span>
-                        <span class="hobby-item">Learning New Tech</span>
-                    </div>
+            <section class="homepage-panel" id="proof">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Proof</p>
+                    <h2>Selected certifications</h2>
+                    <p>These certifications support my learning path and reflect a structured commitment to building stronger technical knowledge.</p>
                 </div>
+                <div class="certification-grid">
+                    <a href="certifications-proof.html#ethical-hacking-essentials" class="certification-card">
+                        <img src="cert/1739834959105.jpg" alt="Ethical Hacking Essentials certificate" loading="lazy" decoding="async" />
+                        <div>
+                            <h3>Ethical Hacking Essentials</h3>
+                            <p>EC-Council</p>
+                        </div>
+                    </a>
+                    <a href="certifications-proof.html#devsecops" class="certification-card">
+                        <img src="cert/1739834715455.jpg" alt="DevSecOps certificate" loading="lazy" decoding="async" />
+                        <div>
+                            <h3>DevSecOps</h3>
+                            <p>EC-Council</p>
+                        </div>
+                    </a>
+                    <a href="certifications-proof.html#linux" class="certification-card">
+                        <img src="cert/1739834861361.jpg" alt="Linux certificate" loading="lazy" decoding="async" />
+                        <div>
+                            <h3>Linux</h3>
+                            <p>EC-Council</p>
+                        </div>
+                    </a>
+                    <a href="certifications-proof.html#pentest-with-netcat" class="certification-card">
+                        <img src="cert/1739836678234.jpg" alt="Pentest with Netcat certificate" loading="lazy" decoding="async" />
+                        <div>
+                            <h3>Pentest with Netcat</h3>
+                            <p>EC-Council</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
 
-                <div class="resume-download">
-                    <button id="downloadResumeBtn">Download Resume (PDF)</button>
+            <section class="homepage-panel contact-cta-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Contact</p>
+                    <h2>Ready to talk about a project or opportunity?</h2>
+                </div>
+                <div class="contact-cta-layout">
+                    <p>If the proof above feels relevant, the best next step is to reach out with context. Use the contact page when you want to share project details, goals, timelines, or the portfolio page that made you contact me.</p>
+                    <p class="contact-cta-bridge">For a faster first conversation, WhatsApp is the quickest path. For a more complete message, the contact page is the strongest starting point.</p>
+                    <div class="hero-cta-group contact-cta-buttons">
+                        <a href="contact.html" class="hero-btn hero-btn-primary">Contact Me</a>
+                        <a href="files/My_Resume.pdf" class="hero-btn hero-btn-secondary" download>View Resume</a>
+                    </div>
+                    <div class="contact-trust-grid">
+                        <article class="proof-card contact-trust-card">
+                            <p class="proof-card-label">Detailed outreach</p>
+                            <h3>Use the contact page for project context</h3>
+                            <p>Share the type of opportunity, what you need help with, and any case study, note, or proof page you want to discuss so the conversation starts with clearer direction.</p>
+                            <a href="contact.html#contact-form-panel" class="text-link-button">Open contact form →</a>
+                        </article>
+                        <article class="proof-card contact-trust-card">
+                            <p class="proof-card-label">Direct outreach</p>
+                            <h3>Use WhatsApp for the fastest first message</h3>
+                            <p>If you prefer to start with a direct message, WhatsApp is the fastest way to open the conversation before moving into more detail.</p>
+                            <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" class="text-link-button">Message on WhatsApp →</a>
+                        </article>
+                        <article class="proof-card contact-trust-card">
+                            <p class="proof-card-label">Supporting review</p>
+                            <h3>Send the proof path with your message</h3>
+                            <p>Featured projects, notes, case studies, and the resume make it easier to point to the exact work or direction you want to discuss.</p>
+                            <a href="blog.html" class="text-link-button">Browse notes and updates →</a>
+                        </article>
+                    </div>
+                    <p class="contact-cta-links-intro">Useful links for the next step:</p>
+                    <div class="contact-link-list">
+                        <a href="contact.html#contact-form-panel">Contact form</a>
+                        <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        <a href="files/My_Resume.pdf" download>Resume</a>
+                        <a href="#featured-projects">Featured projects</a>
+                        <a href="blog.html">Notes and updates</a>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
-                <img src="icons/youtube.svg" alt="YouTube" />
-            </a>
-            <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
-                <img src="icons/facebook.svg" alt="Facebook" />
-            </a>
-            <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
-                <img src="icons/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
-                <img src="icons/linkedin.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
-                <img src="icons/whatsapp.svg" alt="WhatsApp" />
-            </a>
+    <div data-shared-footer></div>
+    <noscript>
+      <footer class="footer">
+        <div class="footer-trust-links">
+          <a href="contact.html">Contact</a>
+          <a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+          <a href="https://github.com/Janonymous0125" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="files/My_Resume.pdf" download>Resume</a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
-        <p>© 2025 ZhiQi</p>
-    </footer>
+        <div class="social-icons">
+          <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/a.qi_0125" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="icons/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+      </footer>
+    </noscript>
 </body>
 </html>

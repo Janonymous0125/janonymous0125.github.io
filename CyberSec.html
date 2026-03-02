@@ -1,141 +1,184 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cybersecurity</title>
+    <meta name="description" content="Cybersecurity portfolio page featuring security notes, writeups, certifications, and practical learning progress by Jeremiah Wong Zhi Qi." />
+    <link rel="canonical" href="https://janonymous0125.github.io/CyberSec.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cybersecurity Projects | Jeremiah Wong Zhi Qi" />
+    <meta property="og:description" content="Cybersecurity portfolio page featuring security notes, writeups, certifications, and practical learning progress by Jeremiah Wong Zhi Qi." />
+    <meta property="og:url" content="https://janonymous0125.github.io/CyberSec.html" />
+    <meta property="og:image" content="https://janonymous0125.github.io/images/hacks.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cybersecurity Projects | Jeremiah Wong Zhi Qi" />
+    <meta name="twitter:description" content="Cybersecurity portfolio page featuring security notes, writeups, certifications, and practical learning progress by Jeremiah Wong Zhi Qi." />
+    <meta name="twitter:image" content="https://janonymous0125.github.io/images/hacks.png" />
+    <title>Cybersecurity Projects | Jeremiah Wong Zhi Qi</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="shared-chrome-config.js"></script>
+    <script defer src="shared-header.js"></script>
     <script defer src="script.js"></script>
-    <script defer src="CSload-posts.js"></script>
-
+    <script defer src="load-posts.js"></script>
+    <script defer src="shared-footer.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Cybersecurity</h1>
+    <div data-shared-header data-page-key="cybersec" data-page-title="Cyber Security"></div>
+    <noscript>
+      <header>
+        <h1>Cyber Security</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown">
-                <button class="dropdown-toggle">Blog ▾</button>
-                <div class="dropdown-content">
-                    <a href="blog.html">General Blog</a>
-                    <a href="CyberSec.html">Cyber Security</a>
-                    <a href="GameDev.html">Game Development</a>
-                    <a href="MusicP.html">Music Production</a>
-                    <a href="VideoEditing.html">Video Editing</a>
-                </div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="dropdown open-current">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">Blog ▾</button>
+            <div class="dropdown-content">
+              <a href="blog.html">General Blog</a>
+              <a href="CyberSec.html" aria-current="page">Cyber Security</a>
+              <a href="GameDev.html">Game Development</a>
+              <a href="MusicP.html">Music Production</a>
+              <a href="VideoEditing.html">Video Editing</a>
             </div>
-            <a href="contact.html">Contact</a>
-            <button id="darkModeToggle">🌓</button>
+          </div>
+          <a href="contact.html">Contact</a>
+          <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" disabled>🌓</button>
         </nav>
-    </header>
+      </header>
+    </noscript>
 
     <div class="page-content transition">
-        <main>
-            <section class="topic-header">
-                <h1>My Short Cybersecurity Story</h1>
-                <p>
-                    I started my journey in cybersecurity when I was 14 years old. To this day, I'm still expanding my skillset in areas like penetration testing, reverse engineering, DevSecOps, and more.
-                </p>
-                <p>
-                    Before I got into cybersecurity, I was actually trying to develop a game, which led me to learn coding. That experience introduced me to the world of cybersecurity and hacking. Since then, I’ve been researching and learning programming in Python, Java, C++, and HTML.
-                </p>
+        <main class="consistency-shell">
+            <section class="home-hero consistency-hero">
+                <div class="home-hero-copy">
+                    <p class="hero-kicker">Cybersecurity focus</p>
+                    <h2>Building practical security knowledge through notes, labs, tools, and documented progress.</h2>
+                    <p class="hero-summary">This section highlights the security side of my portfolio: learning logs, walkthroughs, certifications, and foundational tooling work that support my long-term direction in cybersecurity.</p>
+                    <div class="hero-cta-group">
+                        <a href="#cyber-posts" class="hero-btn hero-btn-primary">View Security Posts</a>
+                        <a href="notes/HackingTips.html" class="hero-btn hero-btn-secondary">Read Notes</a>
+                    </div>
+                </div>
+
+                <div class="hero-identity-meta">
+                    <p class="hero-identity-label">Current emphasis</p>
+                    <h3>Security fundamentals and technical documentation</h3>
+                    <ul>
+                        <li>Linux and command line familiarity</li>
+                        <li>Beginner-friendly lab and walkthrough notes</li>
+                        <li>Certification-supported structured learning</li>
+                    </ul>
+                </div>
             </section>
 
-            <section class="topic-header">
-                <h1>Cyber Blogs</h1>
-                <p>Tips, tools, and thoughts on ethical hacking and infosec.</p>
-                <p class="topic-body" id="post-list">Loading posts...</p>
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Overview</p>
+                    <h2>What this page is meant to show</h2>
+                    <p>This is not just a list of posts. It is the part of the portfolio that shows how I think through security concepts, document technical learning, and build stronger foundations over time.</p>
+                </div>
+                <div class="consistency-feature-grid">
+                    <article class="strength-card">
+                        <h3>Notes and Writeups</h3>
+                        <p>Security-focused posts and practical notes that document the tools, commands, and ideas I am learning.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Linux and Environment Skills</h3>
+                        <p>Hands-on work with Linux distributions and terminal workflows used throughout labs and technical experimentation.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Certification Support</h3>
+                        <p>Course-based learning that adds structure and reinforces the concepts behind practical portfolio work.</p>
+                    </article>
+                </div>
             </section>
 
-            <section class="topic-body">
-                <article class="project-card">
-                    <h2>Tips and Tricks</h2>
-                    <p>For people who are interested here are some Tips you might want to know.</p>
-                    <div class="category-grid">
-                        <a href="CodingTips.html" class="category-card">
-                            <img src="images/CodingTips.jpg" alt="Coding" />
-                            <span>Coding Tips</span>
-                        </a>
-                        <a href="LinuxTips.html" class="category-card">
-                            <img src="images/LinuxTips.png" alt="Linux" />
-                            <span>Linux Tips</span>
-                        </a>
-                        <a href="notes/HackingTips.html" class="category-card">
-                            <img src="images/HackingTips.jpg" alt="Hacks" />
-                            <span>Hacking Tips</span>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <h2>Linux Skills</h2>
-                    <p>
-                        Linux has a huge library of distributions. I've been using BlackArch Linux, Kali Linux, Parrot Sec OS and Ubuntu Linux during my learning curve. Among all the distro that I've used, Kali Linux and ParrotSec OS is my go to, mainly
-                        it is already builtin with all the tools needed to start your ethical hacking journey. As for Ubuntu and BlackArch Linux, its more customizable to do other stuff like running an AI Language Model, Web Application, and more advanced
-                        tools that you can code yourself.
-                    </p>
-                </article>
-                <article class="project-card">
-                    <h2>My Certificates</h2>
-                    <p>
-                        These are the cretificates I got from EC-Counsil.
-                    </p>
-                    <div class="category-grid">
-                        <a href="cert/1739833890161.jpg" class="category-card">
-                            <img src="cert/1739833890161.jpg" alt="BlackhatC++" />
-                            <span>Black Hat C++:C++ for Penetesters</span>
-                        </a>
-                        <a href="cert/1739834280527.jpg" class="category-card">
-                            <img src="cert/1739834280527.jpg" alt="DWAC" />
-                            <span>Darkweb, Anonymity and Crytocurrency</span>
-                        </a>
-                        <a href="cert/1739834383309.jpg" class="category-card">
-                            <img src="cert/1739834383309.jpg" alt="PT&PEC" />
-                            <span>Penetration and Privilege Escalation</span>
-                        </a>
-                        <a href="cert/1739834715455.jpg" class="category-card">
-                            <img src="cert/1739834715455.jpg" alt="DevSecOps">
-                            <span>DevSecOps</span>
-                        </a>
-                        <a href="cert/1739834861361.jpg" class="category-card">
-                            <img src="cert/1739834861361.jpg" alt="Linux">
-                            <span>Linux</span>
-                        </a>
-                        <a href="cert/1739834959105.jpg" class="category-card">
-                            <img src="cert/1739834959105.jpg" alt="EHE">
-                            <span>Ethical Hacking Essentials</span>
-                        </a>
-                        <a href="cert/1739836678234.jpg" class="category-card">
-                            <img src="cert/1739836678234.jpg" alt="PTwNC">
-                            <span>Pentest with NetCat</span>
-                        </a>
+            <section class="homepage-panel consistency-panel" id="cyber-posts">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Security posts</p>
+                    <h2>Notes, tools, and learning updates</h2>
+                </div>
+                <div class="topic-body consistency-post-list" id="post-list" data-posts-json="posts/posts-cybersec.json" data-download-label="📎 Download File">Loading posts...</div>
+            </section>
 
-                    </div>
-
-                </article>
-
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Resources</p>
+                    <h2>Supporting security material</h2>
+                </div>
+                <div class="consistency-feature-grid consistency-resource-grid">
+                    <article class="project-card consistency-resource-card">
+                        <h3>Technical Notes</h3>
+                        <p>Bandit walkthroughs, command line reminders, and practical learning references that help reinforce foundational knowledge.</p>
+                        <div class="category-grid">
+                            <a href="notes/HackingTips.html" class="category-card">
+                                <img src="images/CodingTips.jpg" alt="Coding tips" />
+                                <span>Coding Tips</span>
+                            </a>
+                            <a href="notes/HackingTips.html" class="category-card">
+                                <img src="images/LinuxTips.png" alt="Linux tips" />
+                                <span>Linux Tips</span>
+                            </a>
+                            <a href="notes/HackingTips.html" class="category-card">
+                                <img src="images/HackingTips.jpg" alt="Hacking tips" />
+                                <span>Hacking Tips</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="project-card consistency-resource-card">
+                        <h3>Linux Workflow</h3>
+                        <p>I have used Kali Linux, Parrot Security OS, Ubuntu, and BlackArch Linux during different stages of learning. That experience helps me get comfortable navigating environments, testing tools, and understanding the practical role Linux plays in security work.</p>
+                    </article>
+                    <article class="project-card consistency-resource-card">
+                        <h3>Selected Certificates</h3>
+                        <p>These highlighted certificates support the structured learning side of the portfolio without replacing hands-on work.</p>
+                        <div class="category-grid">
+                            <a href="cert/1739834959105.jpg" class="category-card">
+                                <img src="cert/1739834959105.jpg" alt="Ethical Hacking Essentials" />
+                                <span>Ethical Hacking Essentials</span>
+                            </a>
+                            <a href="cert/1739834715455.jpg" class="category-card">
+                                <img src="cert/1739834715455.jpg" alt="DevSecOps" />
+                                <span>DevSecOps</span>
+                            </a>
+                            <a href="cert/1739834861361.jpg" class="category-card">
+                                <img src="cert/1739834861361.jpg" alt="Linux certificate" />
+                                <span>Linux</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
     </div>
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
-                <img src="icons/youtube.svg" alt="YouTube" />
-            </a>
-            <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
-                <img src="icons/facebook.svg" alt="Facebook" />
-            </a>
-            <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
-                <img src="icons/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
-                <img src="icons/linkedin.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
-                <img src="icons/whatsapp.svg" alt="WhatsApp" />
-            </a>
+    <div data-shared-footer></div>
+    <noscript>
+      <footer class="footer">
+        <div class="footer-trust-links">
+          <a href="contact.html">Contact</a>
+          <a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+          <a href="https://github.com/Janonymous0125" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="files/My_Resume.pdf" download>Resume</a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
-        <p>© 2025 ZhiQi</p>
-    </footer>
+        <div class="social-icons">
+          <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/a.qi_0125" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="icons/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+      </footer>
+    </noscript>
 </body>
 </html>

@@ -3,56 +3,211 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blogs</title>
+  <meta name="description" content="Read general blog posts, project updates, notes, and practical writeups from Jeremiah Wong Zhi Qi across technical and creative work." />
+  <link rel="canonical" href="https://janonymous0125.github.io/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="General Blog | Jeremiah Wong Zhi Qi" />
+  <meta property="og:description" content="Read general blog posts, project updates, notes, and practical writeups from Jeremiah Wong Zhi Qi across technical and creative work." />
+  <meta property="og:url" content="https://janonymous0125.github.io/blog.html" />
+  <meta property="og:image" content="https://janonymous0125.github.io/images/post1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="General Blog | Jeremiah Wong Zhi Qi" />
+  <meta name="twitter:description" content="Read general blog posts, project updates, notes, and practical writeups from Jeremiah Wong Zhi Qi across technical and creative work." />
+  <meta name="twitter:image" content="https://janonymous0125.github.io/images/post1.jpg" />
+  <title>General Blog | Jeremiah Wong Zhi Qi</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <script defer src="load-blog.js"></script>
+  <script defer src="shared-chrome-config.js"></script>
+  <script defer src="shared-header.js"></script>
+    <script defer src="script.js"></script>
+  <script defer src="load-posts.js"></script>
+    <script defer src="shared-footer.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Blogs</h1>
+    <div data-shared-header data-page-key="blog" data-page-title="General Blog"></div>
+    <noscript>
+      <header>
+        <h1>General Blog</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown">
-                <button class="dropdown-toggle">Blog ▾</button>
-                <div class="dropdown-content">
-                    <a href="blog.html">General Blog</a>
-                    <a href="CyberSec.html">Cyber Security</a>
-                    <a href="GameDev.html">Game Development</a>
-                    <a href="MusicP.html">Music Production</a>
-                    <a href="VideoEditing.html">Video Editing</a>
-                </div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="dropdown open-current">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">Blog ▾</button>
+            <div class="dropdown-content">
+              <a href="blog.html" aria-current="page">General Blog</a>
+              <a href="CyberSec.html">Cyber Security</a>
+              <a href="GameDev.html">Game Development</a>
+              <a href="MusicP.html">Music Production</a>
+              <a href="VideoEditing.html">Video Editing</a>
             </div>
-            <a href="contact.html">Contact</a>
-            <button id="darkModeToggle">🌓</button>
+          </div>
+          <a href="contact.html">Contact</a>
+          <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" disabled>🌓</button>
         </nav>
-    </header>
+      </header>
+    </noscript>
+
     <div class="page-content transition">
-        <main>
-            <h1>My Blogs</h1>
-            <div id="blog-posts">Loading posts...</div>
+        <main class="consistency-shell">
+            <section class="home-hero consistency-hero">
+                <div class="home-hero-copy">
+                    <p class="hero-kicker">General notes and updates</p>
+                    <h2>A shared space for project updates, practical notes, and ideas that do not belong to just one category.</h2>
+                    <p class="hero-summary">This page collects general writeups from across my portfolio. It is where I keep broader technical updates, experiments, practical notes, and guided resources that support the way I learn by building and documenting.</p>
+                    <div class="hero-cta-group">
+                        <a href="#general-posts" class="hero-btn hero-btn-primary">View Latest Posts</a>
+                        <a href="CyberSec.html" class="hero-btn hero-btn-secondary">Explore Cybersecurity Work</a>
+                    </div>
+                </div>
+
+                <div class="home-hero-visual hero-identity-card">
+                    <img src="images/post1.jpg" alt="General notes and portfolio updates" class="hero-profile-img" />
+                    <div class="hero-identity-meta">
+                        <p class="hero-identity-label">What this section is for</p>
+                        <h3>Documenting work in progress with clearer structure</h3>
+                        <ul>
+                            <li>General project updates and technical writeups</li>
+                            <li>Practical notes that support ongoing learning</li>
+                            <li>Portfolio items that sit across multiple categories</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Coverage</p>
+                    <h2>What you can expect to find here</h2>
+                    <p>This section supports the rest of the site by keeping broad updates visible, especially when a post connects to more than one part of the portfolio.</p>
+                </div>
+                <div class="consistency-feature-grid">
+                    <article class="strength-card">
+                        <h3>Project Updates</h3>
+                        <p>Build progress, workflow changes, and implementation notes from active portfolio work.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Technical Notes</h3>
+                        <p>General setup ideas, scripts, tools, and process improvements that do not fit only one specialty page.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Learning Logs</h3>
+                        <p>Short reflections and practical takeaways that keep the portfolio transparent and easier to follow.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Browse by category</p>
+                    <h2>Explore the more focused sections of the portfolio</h2>
+                </div>
+                <div class="consistency-feature-grid">
+                    <a href="CyberSec.html" class="notes-preview-card">
+                        <h3>Cybersecurity</h3>
+                        <p>Security notes, labs, and certification-related learning.</p>
+                        <span>Open section →</span>
+                    </a>
+                    <a href="GameDev.html" class="notes-preview-card">
+                        <h3>Game Development</h3>
+                        <p>Interactive experiments, Unreal Engine work, and project logs.</p>
+                        <span>Open section →</span>
+                    </a>
+                    <a href="MusicP.html" class="notes-preview-card">
+                        <h3>Music Production</h3>
+                        <p>DJ mixes, production workflows, and creative audio work.</p>
+                        <span>Open section →</span>
+                    </a>
+                    <a href="VideoEditing.html" class="notes-preview-card">
+                        <h3>Visual Media</h3>
+                        <p>Editing, photography, and media production updates.</p>
+                        <span>Open section →</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel notes-hub-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Featured note</p>
+                    <h2>Start with the hands-on cybersecurity notes hub</h2>
+                    <p>The notes section is where longer-form walkthroughs live. It complements the main Cybersecurity page by grouping practical learning material, lab references, and step-by-step writeups in one place.</p>
+                </div>
+                <div class="notes-hub-layout">
+                    <article class="notes-hub-card">
+                        <p class="notes-hub-label">Hacking Tips and Tricks</p>
+                        <h3>Structured walkthroughs, practical reminders, and entry-level lab notes</h3>
+                        <p>The current guide covers ethical hacking reminders, hacker-type context, and the first Bandit OverTheWire walkthroughs with command examples and screenshots.</p>
+                        <ul class="notes-hub-points">
+                            <li>Quick table-of-contents navigation for long-form notes</li>
+                            <li>Bandit level walkthroughs with command references</li>
+                            <li>Built as a reusable learning log instead of a one-off blog post</li>
+                        </ul>
+                        <div class="hero-cta-group notes-hub-actions">
+                            <a href="notes/HackingTips.html" class="hero-btn hero-btn-primary">Open Hacking Notes</a>
+                            <a href="CyberSec.html" class="hero-btn hero-btn-secondary">Open Cybersecurity Section</a>
+                        </div>
+                    </article>
+                    <aside class="notes-hub-sidecard">
+                        <p class="notes-hub-label">Best use</p>
+                        <h3>Use the blog for updates, and the notes hub for deeper reference</h3>
+                        <p>General posts stay lightweight. The notes hub is better for repeat visits, longer guides, and material that benefits from structured navigation.</p>
+                        <div class="notes-hub-mini-list">
+                            <span>General updates</span>
+                            <span>Long-form walkthroughs</span>
+                            <span>Cybersecurity learning logs</span>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel" id="general-posts">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Latest posts</p>
+                    <h2>General blog entries and shared project notes</h2>
+                </div>
+                <div id="blog-posts" class="consistency-post-list" data-posts-json="posts/generalposts.json" data-download-label="Download File" data-empty-text="General posts will appear here as new updates are published." data-error-text="Unable to load general posts right now.">Loading posts...</div>
+            </section>
+
+            <section class="homepage-panel consistency-panel consistency-cta-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Next step</p>
+                    <h2>Want to discuss a project, workflow, or idea?</h2>
+                    <p>You can explore the more focused sections of the site or reach out directly if you want to talk about a build, collaboration, or technical direction.</p>
+                </div>
+                <div class="hero-cta-group contact-cta-buttons">
+                    <a href="contact.html" class="hero-btn hero-btn-primary">Contact Me</a>
+                    <a href="index.html#featured-projects" class="hero-btn hero-btn-secondary">Back to Featured Work</a>
+                </div>
+            </section>
         </main>
-    </dvi>
-        <footer class="footer">
-            <div class="social-icons">
-                <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
-                    <img src="icons/youtube.svg" alt="YouTube" />
-                </a>
-                <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
-                    <img src="icons/facebook.svg" alt="Facebook" />
-                </a>
-                <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
-                    <img src="icons/instagram.svg" alt="Instagram" />
-                </a>
-                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
-                    <img src="icons/linkedin.svg" alt="LinkedIn" />
-                </a>
-                <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
-                    <img src="icons/whatsapp.svg" alt="WhatsApp" />
-                </a>
-            </div>
-            <p>© 2025 ZhiQi</p>
-        </footer>
+    </div>
+    <div data-shared-footer></div>
+    <noscript>
+      <footer class="footer">
+        <div class="footer-trust-links">
+          <a href="contact.html">Contact</a>
+          <a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+          <a href="https://github.com/Janonymous0125" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="files/My_Resume.pdf" download>Resume</a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/a.qi_0125" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="icons/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+      </footer>
+    </noscript>
 </body>
 </html>

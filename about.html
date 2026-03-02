@@ -3,80 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
+  <meta name="description" content="Learn more about Jeremiah Wong Zhi Qi, a cybersecurity-focused builder working across security learning, automation, and creative technology." />
+  <link rel="canonical" href="https://janonymous0125.github.io/about.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="About | Jeremiah Wong Zhi Qi" />
+  <meta property="og:description" content="Learn more about Jeremiah Wong Zhi Qi, a cybersecurity-focused builder working across security learning, automation, and creative technology." />
+  <meta property="og:url" content="https://janonymous0125.github.io/about.html" />
+  <meta property="og:image" content="https://janonymous0125.github.io/images/profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About | Jeremiah Wong Zhi Qi" />
+  <meta name="twitter:description" content="Learn more about Jeremiah Wong Zhi Qi, a cybersecurity-focused builder working across security learning, automation, and creative technology." />
+  <meta name="twitter:image" content="https://janonymous0125.github.io/images/profile.jpg" />
+  <title>About | Jeremiah Wong Zhi Qi</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <script defer src="shared-chrome-config.js"></script>
+  <script defer src="shared-header.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="shared-footer.js"></script>
 </head>
 <body>
-    <header>
-        <h1>About me</h1>
+    <div data-shared-header data-page-key="about" data-page-title="About"></div>
+    <noscript>
+      <header>
+        <h1>About</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown">
-                <button class="dropdown-toggle">Blog ▾</button>
-                <div class="dropdown-content">
-                    <a href="blog.html">General Blog</a>
-                    <a href="CyberSec.html">Cyber Security</a>
-                    <a href="GameDev.html">Game Development</a>
-                    <a href="MusicP.html">Music Production</a>
-                    <a href="VideoEditing.html">Video Editing</a>
-                </div>
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <div class="dropdown">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Blog ▾</button>
+            <div class="dropdown-content">
+              <a href="blog.html">General Blog</a>
+              <a href="CyberSec.html">Cyber Security</a>
+              <a href="GameDev.html">Game Development</a>
+              <a href="MusicP.html">Music Production</a>
+              <a href="VideoEditing.html">Video Editing</a>
             </div>
-            <a href="contact.html">Contact</a>
-            <button id="darkModeToggle">🌓</button>
+          </div>
+          <a href="contact.html">Contact</a>
+          <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" disabled>🌓</button>
         </nav>
-    </header>
+      </header>
+    </noscript>
+
     <div class="page-content transition">
-        <main class="about-wrapper">
-            <video autoplay muted loop playsinline class="background-video">
-                <source src="videos/about-bg.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <section class="about-section">
-                <div class="about-text">
-                    <div class="intro-with-image">
-                        <img src="images/profile.jpg" alt="Jeremiah Wong Zhi Qi" class="inline-profile" />
-                        <h1>Hi, I'm Jeremiah Wong Zhi Qi</h1>
+        <main class="consistency-shell">
+            <section class="home-hero consistency-hero">
+                <div class="home-hero-copy">
+                    <p class="hero-kicker">About Jeremiah Wong Zhi Qi</p>
+                    <h2>Cybersecurity-focused builder exploring security, automation, and creative technology through hands-on work.</h2>
+                    <p class="hero-summary">I learn by building. My portfolio brings together security notes, project experiments, scripting work, and creative development so each step of learning becomes something practical, documented, and easier to improve over time.</p>
+                    <div class="hero-cta-group">
+                        <a href="CyberSec.html" class="hero-btn hero-btn-primary">Explore Cybersecurity Work</a>
+                        <a href="contact.html" class="hero-btn hero-btn-secondary">Contact Me</a>
                     </div>
-                    <div class="about-paragraphs">
-                        <p>
-                            I'm just a curious boy who likes to learn anything that involves computer, science and creativity. I've been finding my way across the field of
-                            Game developing (including 3D Designing, Unreal Engine, Blender), Graphic Designing (including Interior Designing, Canva, Adobe Illustrator), Music production (including FL Studio and Dee Jay Jamming),
-                            Video Editing (like CapCut, Adobe Premium Pro, Blackmagic Davinci Resolve), and also took some Cybersecurity courses on <a href='https://www.eccouncil.org/'>EC-Council</a>.
-                        </p>
-                        <p>
-                            Over the years, I’ve worked on a variety of creative projects - web designing, game designing, music production, etc. When I'm not working, I enjoy starting a new research on new projects learning new things eveyday.
-                        </p>
-                        <p>
-                            This site showcases my portfolio, blogs, resume and some of my projects that i started.
-                        </p>
-                        <p>
-                            Thanks for stopping by! Feel free to reach out to me through the <a href="contact.html">Contact</a> page.
-                        </p>
+                </div>
+
+                <div class="home-hero-visual hero-identity-card">
+                    <img src="images/profile.jpg" alt="Jeremiah Wong Zhi Qi" class="hero-profile-img" />
+                    <div class="hero-identity-meta">
+                        <p class="hero-identity-label">Working style</p>
+                        <h3>Practical, curious, and documentation-driven</h3>
+                        <ul>
+                            <li>Security learning supported by labs and writeups</li>
+                            <li>Technical experimentation across scripting and web projects</li>
+                            <li>Creative development that strengthens problem solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Profile</p>
+                    <h2>How I approach my work</h2>
+                </div>
+                <div class="consistency-two-column">
+                    <div class="consistency-copy-stack">
+                        <p>I enjoy working across technical and creative disciplines, but cybersecurity is the clearest direction of this portfolio. I use each project as a way to strengthen practical skills, improve structure, and build a body of work that shows steady progress.</p>
+                        <p>Alongside security learning, I explore scripting, web development, game development, and digital production. That mix helps me think across systems, workflows, and user-facing experiences instead of treating each skill area in isolation.</p>
+                        <p>The goal of this site is simple: show what I am learning, what I am building, and how I turn curiosity into practical output.</p>
+                    </div>
+                    <div class="consistency-card-stack">
+                        <article class="proof-card">
+                            <h3>Primary direction</h3>
+                            <p>Cybersecurity, technical problem solving, and project-based learning.</p>
+                        </article>
+                        <article class="proof-card">
+                            <h3>Supporting lanes</h3>
+                            <p>Automation, web development, game development, and creative tooling.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Focus areas</p>
+                    <h2>What this portfolio is built around</h2>
+                </div>
+                <div class="consistency-feature-grid">
+                    <article class="strength-card">
+                        <h3>Cybersecurity Foundations</h3>
+                        <p>Building familiarity with Linux, labs, basic tooling, and structured security learning through notes and guided practice.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Scripting and Technical Builds</h3>
+                        <p>Using code, web projects, and automation experiments to turn ideas into usable outputs and repeatable workflows.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Creative Development</h3>
+                        <p>Exploring Unreal Engine, interactive design, and multimedia work to strengthen execution across technical and visual systems.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Documentation Habits</h3>
+                        <p>Keeping track of lessons learned, setup details, and practical references so each project is easier to revisit and improve.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel consistency-cta-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Next step</p>
+                    <h2>Want to see the work in context?</h2>
+                </div>
+                <div class="contact-cta-layout">
+                    <p>You can start with the cybersecurity page for notes, writeups, and certifications, or visit the contact page if you would like to connect about opportunities, collaborations, or project work.</p>
+                    <div class="hero-cta-group contact-cta-buttons">
+                        <a href="CyberSec.html" class="hero-btn hero-btn-primary">View Cybersecurity Page</a>
+                        <a href="contact.html" class="hero-btn hero-btn-secondary">Go to Contact</a>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <div class="social-icons">
-                <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
-                    <img src="icons/youtube.svg" alt="YouTube" />
-                </a>
-                <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
-                    <img src="icons/facebook.svg" alt="Facebook" />
-                </a>
-                <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
-                    <img src="icons/instagram.svg" alt="Instagram" />
-                </a>
-                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
-                    <img src="icons/linkedin.svg" alt="LinkedIn" />
-                </a>
-                <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
-                    <img src="icons/whatsapp.svg" alt="WhatsApp" />
-                </a>
-            </div>
-            <p>© 2025 ZhiQi</p>
-        </footer>
+    </div>
+    <div data-shared-footer></div>
+    <noscript>
+      <footer class="footer">
+        <div class="footer-trust-links">
+          <a href="contact.html">Contact</a>
+          <a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+          <a href="https://github.com/Janonymous0125" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="files/My_Resume.pdf" download>Resume</a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/a.qi_0125" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="icons/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+      </footer>
+    </noscript>
 </body>
 </html>

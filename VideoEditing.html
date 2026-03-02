@@ -1,97 +1,168 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Media</title>
+    <meta name="description" content="Visual media portfolio showcasing video editing, photography, and creative production work from Jeremiah Wong Zhi Qi." />
+    <link rel="canonical" href="https://janonymous0125.github.io/VideoEditing.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Visual Media Portfolio | Jeremiah Wong Zhi Qi" />
+    <meta property="og:description" content="Visual media portfolio showcasing video editing, photography, and creative production work from Jeremiah Wong Zhi Qi." />
+    <meta property="og:url" content="https://janonymous0125.github.io/VideoEditing.html" />
+    <meta property="og:image" content="https://janonymous0125.github.io/images/photo-icon.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Visual Media Portfolio | Jeremiah Wong Zhi Qi" />
+    <meta name="twitter:description" content="Visual media portfolio showcasing video editing, photography, and creative production work from Jeremiah Wong Zhi Qi." />
+    <meta name="twitter:image" content="https://janonymous0125.github.io/images/photo-icon.jpg" />
+    <title>Visual Media Portfolio | Jeremiah Wong Zhi Qi</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="shared-chrome-config.js"></script>
+    <script defer src="shared-header.js"></script>
     <script defer src="script.js"></script>
-    <script defer src="VEload-posts.js"></script>
+    <script defer src="load-posts.js"></script>
+    <script defer src="shared-footer.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Photo & Videography</h1>
+    <div data-shared-header data-page-key="videoediting" data-page-title="Visual Media"></div>
+    <noscript>
+      <header>
+        <h1>Visual Media</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown">
-                <button class="dropdown-toggle">Blog ▾</button>
-                <div class="dropdown-content">
-                    <a href="blog.html">General Blog</a>
-                    <a href="CyberSec.html">Cyber Security</a>
-                    <a href="GameDev.html">Game Development</a>
-                    <a href="MusicP.html">Music Production</a>
-                    <a href="VideoEditing.html">Video Editing</a>
-                </div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="dropdown open-current">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">Blog ▾</button>
+            <div class="dropdown-content">
+              <a href="blog.html">General Blog</a>
+              <a href="CyberSec.html">Cyber Security</a>
+              <a href="GameDev.html">Game Development</a>
+              <a href="MusicP.html">Music Production</a>
+              <a href="VideoEditing.html" aria-current="page">Video Editing</a>
             </div>
-            <a href="contact.html">Contact</a>
-            <button id="darkModeToggle">🌓</button>
+          </div>
+          <a href="contact.html">Contact</a>
+          <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" disabled>🌓</button>
         </nav>
-    </header>
+      </header>
+    </noscript>
+
     <div class="page-content transition">
-        <main class="about-wrapper">
-            <video autoplay muted loop playsinline class="background-video">
-                <source src="videos/about-bg.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <section class="topic-header">
-                <h1>My Media skills</h1>
-                <p>
-                    Media Editing and Photography is my hobby, I mostly do it for fun or just messing around with my friends. It is still a skill I'd picked up during these years.
-                    I mainly uses Davincii Resolve for most of my videos, Adobe Premiere Pro and After Effects for some touchup jobs, CapCut for quick and easy edit and posts. I uses
-                    Blender to make 3D designs and animations too.
-                </p>
+        <main class="consistency-shell">
+            <section class="home-hero consistency-hero">
+                <div class="home-hero-copy">
+                    <p class="hero-kicker">Visual storytelling</p>
+                    <h2>Developing editing, photography, and media production skills through hands-on creative projects.</h2>
+                    <p class="hero-summary">This section covers the visual side of my portfolio: editing workflows, photography, and media experiments. It supports the same project mindset used across the site by turning creative ideas into structured output.</p>
+                    <div class="hero-cta-group">
+                        <a href="#media-posts" class="hero-btn hero-btn-primary">View Media Updates</a>
+                        <a href="contact.html" class="hero-btn hero-btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="home-hero-visual hero-identity-card">
+                    <img src="images/photo-icon.jpg" alt="Visual media and editing work" class="hero-profile-img" />
+                    <div class="hero-identity-meta">
+                        <p class="hero-identity-label">Creative lane</p>
+                        <h3>Editing, capture, and motion-focused production</h3>
+                        <ul>
+                            <li>Video editing and polished content assembly</li>
+                            <li>Photography and visual composition practice</li>
+                            <li>Support work for multimedia and creative storytelling</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
-            <section class="topic-header">
-                <h1>Media Blogs</h1>
-                <p>Updates on my newest posts</p>
-                <p class="topic-body" id="post-list">Loading posts...</p>
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Creative focus</p>
+                    <h2>What this visual media section covers</h2>
+                    <p>Visual work gives me another way to think about pacing, communication, and presentation. It also supports other areas of the portfolio when projects need stronger storytelling or clearer delivery.</p>
+                </div>
+                <div class="consistency-feature-grid">
+                    <article class="strength-card">
+                        <h3>Video Editing</h3>
+                        <p>Building cleaner edits, pacing sequences, and finishing content for more polished presentation.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Photography</h3>
+                        <p>Developing visual composition and capture habits that support both documentation and creative output.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Motion and Support Work</h3>
+                        <p>Using creative tools to add structure, polish, and stronger visual communication across projects.</p>
+                    </article>
+                </div>
             </section>
 
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Tools</p>
+                    <h2>Main tools used in this workflow</h2>
+                </div>
+                <div class="consistency-two-column">
+                    <article class="proof-card">
+                        <h3>Editing and finishing</h3>
+                        <p>DaVinci Resolve is the main tool I use for editing, while Premiere Pro, After Effects, and CapCut support lighter edits or specific finishing needs.</p>
+                    </article>
+                    <article class="proof-card">
+                        <h3>3D and supporting visuals</h3>
+                        <p>Blender is part of the workflow when a project needs simple 3D design, animation support, or visual experimentation.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel" id="media-posts">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Latest updates</p>
+                    <h2>Media posts and visual project notes</h2>
+                    <p>This section will hold future media updates, experiments, and portfolio-ready creative work as it is published.</p>
+                </div>
+                <div class="topic-body consistency-post-list" id="post-list" data-posts-json="posts/posts-media.json" data-download-label="Download File" data-empty-text="Visual media updates will appear here as new work is published." data-error-text="Unable to load media posts right now.">Loading posts...</div>
+            </section>
+
+            <section class="homepage-panel consistency-panel consistency-cta-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Explore more</p>
+                    <h2>See how this creative work connects to the rest of the portfolio</h2>
+                    <p>Visual media is one part of a broader portfolio that also includes cybersecurity, technical builds, game development, and documented learning.</p>
+                </div>
+                <div class="hero-cta-group contact-cta-buttons">
+                    <a href="index.html#featured-projects" class="hero-btn hero-btn-primary">Back to Featured Work</a>
+                    <a href="MusicP.html" class="hero-btn hero-btn-secondary">View Music Production</a>
+                </div>
+            </section>
         </main>
-        <div id="construction-modal" class="modal-overlay">
-            <div class="modal-content">
-                <h2>⚠️ Page Under Construction ⚠️</h2>
-                <p>
-                    This page is still being built. Some functions may not work yet. Thanks for your patience!
-                    You can use the social buttons on the footer of the page to reach out to me.
-                </p>
-                <button id="close-modal">OK</button>
-            </div>
-        </div>
     </div>
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" aria-label="YouTube">
-                <img src="icons/youtube.svg" alt="YouTube" />
-            </a>
-            <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" aria-label="Facebook">
-                <img src="icons/facebook.svg" alt="Facebook" />
-            </a>
-            <a href="https://instagram.com/a.qi_0125" target="_blank" aria-label="Instagram">
-                <img src="icons/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jeremiah-wong-zhi-qi-56a883351" target="_blank" aria-label="LinkedIn">
-                <img src="icons/linkedin.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://wa.me/60167729591" target="_blank" aria-label="WhatsApp">
-                <img src="icons/whatsapp.svg" alt="WhatsApp" />
-            </a>
+    <div data-shared-footer></div>
+    <noscript>
+      <footer class="footer">
+        <div class="footer-trust-links">
+          <a href="contact.html">Contact</a>
+          <a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+          <a href="https://github.com/Janonymous0125" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="files/My_Resume.pdf" download>Resume</a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
-        <p>© 2025 ZhiQi</p>
-    </footer>
-    <script>
-        window.addEventListener("load", () => {
-            const modal = document.getElementById("construction-modal");
-            const closeBtn = document.getElementById("close-modal");
-
-            modal.style.display = "flex";
-
-            closeBtn.addEventListener("click", () => {
-                modal.style.display = "none";
-            });
-        });
-    </script>
+        <div class="social-icons">
+          <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/a.qi_0125" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="icons/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+      </footer>
+    </noscript>
 </body>
 </html>

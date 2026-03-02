@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Case study for a Windows setup automation workflow built with PowerShell to reduce repetitive setup steps and improve repeatability." />
+  <link rel="canonical" href="https://janonymous0125.github.io/automation-case-study.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Windows Setup Automation Script | Case Study" />
+  <meta property="og:description" content="See how this PowerShell workflow handles repeatable Windows setup tasks, user restrictions, hosts file updates, cleanup, and scheduled shutdown automation." />
+  <meta property="og:url" content="https://janonymous0125.github.io/automation-case-study.html" />
+  <meta property="og:image" content="https://janonymous0125.github.io/images/post1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Windows Setup Automation Script | Case Study" />
+  <meta name="twitter:description" content="A lightweight case study for a PowerShell-based Windows setup workflow focused on repeatability and practical administration tasks." />
+  <meta name="twitter:image" content="https://janonymous0125.github.io/images/post1.jpg" />
+  <title>Windows Setup Automation Script | Case Study</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="shared-chrome-config.js"></script>
+  <script defer src="shared-header.js"></script>
+  <script defer src="script.js"></script>
+  <script defer src="shared-footer.js"></script>
+</head>
+<body>
+    <div data-shared-header data-page-key="home" data-page-title="Automation Case Study"></div>
+    <noscript>
+      <header>
+        <h1>Automation Case Study</h1>
+        <nav>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <div class="dropdown">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Blog ▾</button>
+            <div class="dropdown-content">
+              <a href="blog.html">General Blog</a>
+              <a href="CyberSec.html">Cyber Security</a>
+              <a href="GameDev.html">Game Development</a>
+              <a href="MusicP.html">Music Production</a>
+              <a href="VideoEditing.html">Video Editing</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+          <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" disabled>🌓</button>
+        </nav>
+      </header>
+    </noscript>
+
+    <div class="page-content transition">
+        <main class="consistency-shell">
+            <section class="home-hero consistency-hero">
+                <div class="home-hero-copy">
+                    <p class="hero-kicker">Automation case study</p>
+                    <h2>Windows setup workflow built to reduce repetitive manual configuration.</h2>
+                    <p class="hero-summary">This PowerShell project turns repeated Windows setup tasks into one guided workflow. It was built to make machine preparation more consistent by handling administrator setup, optional user time limits, hosts file restrictions, and a scheduled shutdown in one repeatable process.</p>
+                    <div class="hero-cta-group">
+                        <a href="scripts/SuperAdmin.ps1" class="hero-btn hero-btn-primary" download>Download Script</a>
+                        <a href="index.html#featured-projects" class="hero-btn hero-btn-secondary">Back to Featured Projects</a>
+                    </div>
+                </div>
+
+                <div class="hero-identity-meta consistency-contact-meta">
+                    <p class="hero-identity-label">What this script covers</p>
+                    <h3>Built around practical administration steps that are easy to repeat.</h3>
+                    <ul>
+                        <li>Self-elevates to administrator mode before changing system settings</li>
+                        <li>Creates a SuperAdmin account and adds it to the Administrators group</li>
+                        <li>Applies optional time limits to a selected local user account</li>
+                        <li>Updates the hosts file and creates a daily shutdown task</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Project overview</p>
+                    <h2>What problem this was built to solve</h2>
+                </div>
+                <div class="consistency-two-column">
+                    <div class="consistency-copy-stack">
+                        <p>Setting up Windows machines by hand often means repeating the same account, restriction, and system configuration steps over and over. That slows the process down and makes it easier to miss details or apply settings inconsistently.</p>
+                        <p>This script packages those actions into a single workflow so the setup process is easier to review, easier to repeat, and less dependent on remembering each step manually. Instead of acting as a generic experiment, the project focuses on practical administration work with a clear operational goal.</p>
+                        <p>The result is a stronger portfolio proof item because it shows scripting, repeatability, and system-level thinking in one place rather than only offering a raw file download.</p>
+                    </div>
+                    <div class="consistency-card-stack">
+                        <article class="proof-card">
+                            <h3>Primary goal</h3>
+                            <p>Reduce repetitive Windows setup work by grouping common admin tasks into one guided PowerShell flow.</p>
+                        </article>
+                        <article class="proof-card">
+                            <h3>Tools used</h3>
+                            <p>PowerShell, Windows local user management, hosts file editing, and Task Scheduler automation.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Workflow</p>
+                    <h2>Key capabilities inside the script</h2>
+                </div>
+                <div class="consistency-feature-grid consistency-resource-grid">
+                    <article class="proof-card consistency-resource-card">
+                        <h3>Administrator guardrail</h3>
+                        <p>The script checks for administrator privileges first and relaunches itself with elevation when needed so the workflow starts with the required permission level.</p>
+                    </article>
+                    <article class="proof-card consistency-resource-card">
+                        <h3>Account setup</h3>
+                        <p>It creates a dedicated SuperAdmin user, prompts for a secure password, and adds that account to the local Administrators group as part of setup.</p>
+                    </article>
+                    <article class="proof-card consistency-resource-card">
+                        <h3>User control steps</h3>
+                        <p>It can apply default or custom logon time limits to a selected local user while blocking changes to highly privileged accounts.</p>
+                    </article>
+                    <article class="proof-card consistency-resource-card">
+                        <h3>Hosts file updates</h3>
+                        <p>The workflow appends blocked domains to the Windows hosts file and includes retry logic so file locking does not immediately break the process.</p>
+                    </article>
+                    <article class="proof-card consistency-resource-card">
+                        <h3>Scheduled shutdown</h3>
+                        <p>It registers a daily shutdown task at 10:30 PM to help enforce a repeatable end-of-day system policy.</p>
+                    </article>
+                    <article class="proof-card consistency-resource-card">
+                        <h3>Cleanup mode</h3>
+                        <p>If the SuperAdmin account already exists, the script switches into cleanup mode and attempts to undo its previous changes instead of running setup again.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Why it matters</p>
+                    <h2>What this project demonstrates beyond the code file</h2>
+                </div>
+                <div class="consistency-two-column">
+                    <div class="consistency-card-stack">
+                        <article class="proof-card">
+                            <h3>Repeatability over one-off setup</h3>
+                            <p>The project is centered on turning a sequence of manual steps into a reusable workflow that is easier to run consistently.</p>
+                        </article>
+                        <article class="proof-card">
+                            <h3>Operational thinking</h3>
+                            <p>It combines account management, policy-style restrictions, and task scheduling into one workflow instead of treating each step in isolation.</p>
+                        </article>
+                    </div>
+                    <div class="consistency-copy-stack">
+                        <p>This case study matters because it reframes the project around value: the script is not just a file to download, it is evidence of practical workflow design. It shows how I approach repetitive technical tasks by organizing them into something structured and easier to maintain.</p>
+                        <p>It also reflects a documentation mindset. By presenting the project with summary, purpose, and capabilities, the work becomes easier for a reviewer to understand quickly without needing to inspect the entire script first.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="homepage-panel consistency-panel consistency-cta-panel">
+                <div class="section-heading left-aligned-heading">
+                    <p class="section-eyebrow">Next step</p>
+                    <h2>Review the script or continue through the portfolio</h2>
+                </div>
+                <div class="contact-cta-layout">
+                    <p>You can download the PowerShell file directly if you want to inspect the implementation, return to the homepage to continue reviewing featured work, or use the contact page if you want to discuss the project in more detail.</p>
+                    <div class="hero-cta-group contact-cta-buttons">
+                        <a href="scripts/SuperAdmin.ps1" class="hero-btn hero-btn-primary" download>Download Script</a>
+                        <a href="contact.html" class="hero-btn hero-btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div data-shared-footer></div>
+    <noscript>
+      <footer class="footer">
+        <div class="footer-trust-links">
+          <a href="contact.html">Contact</a>
+          <a href="mailto:jeremiahwzqi@gmail.com">Email</a>
+          <a href="https://github.com/Janonymous0125" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="files/My_Resume.pdf" download>Resume</a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://youtube.com/@zhiqi0125?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/profile.php?id=61562756152933" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/a.qi_0125" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/jeremiah-wong-zhi-qi-56a883351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/60167729591" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="icons/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 ZhiQi · Email, LinkedIn, GitHub, WhatsApp, and resume access are available on every page.</p>
+      </footer>
+    </noscript>
+</body>
+</html>
