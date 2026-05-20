@@ -4,6 +4,15 @@ const sharedHeaderPages = sharedHeaderConfig.pages || {};
 const sharedBlogKeys = new Set(sharedHeaderConfig.blogNav || []);
 const sharedBlogButtonLabel = sharedHeaderConfig.blogButtonLabel || 'Blog ▾';
 
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 function buildNavLink(href, label, currentKey, linkKey) {
     const isCurrent = currentKey === linkKey;
     return `<a href="${href}"${isCurrent ? ' aria-current="page"' : ''}>${label}</a>`;
@@ -30,6 +39,7 @@ function buildBlogDropdown(currentKey) {
 function buildSharedHeader(currentKey, pageTitle) {
     const resolvedKey = sharedHeaderPages[currentKey] ? currentKey : 'home';
     const resolvedTitle = pageTitle || (sharedHeaderPages[resolvedKey] && sharedHeaderPages[resolvedKey].h1) || 'Jeremiah Wong Zhi Qi';
+    const safeResolvedTitle = escapeHtml(resolvedTitle);
     const primaryNavMarkup = (sharedHeaderConfig.primaryNav || []).map((key) => {
         if (key === 'contact') {
             return '';
@@ -42,7 +52,7 @@ function buildSharedHeader(currentKey, pageTitle) {
 
     return `
         <header>
-            <h1>${resolvedTitle}</h1>
+            <h1>${safeResolvedTitle}</h1>
             <nav>
                 ${primaryNavMarkup}
                 ${buildBlogDropdown(resolvedKey)}
