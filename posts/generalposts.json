@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Windows Setup Automation Script",
+    "date": "12 Jun 2025",
+    "content": "A PowerShell script built to help automate setup work for Jeremiah Education computers and make routine configuration steps easier to repeat.",
+    "file": "scripts/SuperAdmin.ps1"
+  }
+]
