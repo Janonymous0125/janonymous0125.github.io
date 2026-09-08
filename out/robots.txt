@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://janonymous0125.github.io/sitemap.xml
